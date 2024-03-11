@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "cveditor.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -15,12 +17,12 @@ MainWindow::MainWindow(QWidget *parent)
         "border: 0;"
         "transition-duration: 1s"
         "}"
-                                  "#pushButton:hover {"
-                                  "color: #111111;"
-                                  "background-color: #E9EDC9;"
-                                  "border: 0;"
-                                  "transition-duration: 1s"
-                                  "}"
+        "#pushButton:hover {"
+        "color: #111111;"
+        "background-color: #E9EDC9;"
+        "border: 0;"
+        "transition-duration: 1s"
+        "}"
                                   );
 }
 
@@ -28,3 +30,12 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    CvEditor Cveditor;
+    Cveditor.setModal(true);
+    hide();
+    Cveditor.exec();
+}
+
