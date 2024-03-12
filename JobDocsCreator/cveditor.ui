@@ -52,7 +52,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page_3">
     <widget class="QLabel" name="label">
@@ -135,6 +135,110 @@
       <string>Continuer</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="buttonChoiceColor">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>201</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>choisir une couleur du fond</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="colorLabel">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>50</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Couleur du rect</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonChoiceColorName">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>90</y>
+       <width>201</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>couleur prénom - nom</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="colorLabelName">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>90</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>prénom nom</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonChoiceColorJob">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>130</y>
+       <width>201</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>couleur métier</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="colorLabelJob">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>130</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>métier</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonChoiceColorInfos">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>201</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>couleur description</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="colorLabelInfos">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>170</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>description</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_5">
     <widget class="QLabel" name="label_3">
@@ -161,6 +265,32 @@
      </property>
      <property name="text">
       <string>Continuer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonChoiceFont">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>90</y>
+       <width>131</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Choisir la police</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelFont">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>100</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Police choisie</string>
      </property>
     </widget>
    </widget>
@@ -238,6 +368,57 @@
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="page_7">
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>82</x>
+       <y>20</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Quel métier cherche tu ?</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="jobEdit">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>80</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>430</y>
+     <width>191</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Insérer une photo</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPhoto">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>50</y>
+     <width>61</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
   </widget>
  </widget>
  <resources/>
