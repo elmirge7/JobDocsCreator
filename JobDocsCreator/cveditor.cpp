@@ -33,10 +33,6 @@ void CvEditor::on_pdfButton_clicked()
     if(dialog.exec() == QDialog::Rejected)
         return;
 
-    // Déclaration des couleurs utilisées
-    QColor textForJob;
-    QColor textForInformations;
-
     QPainter painter;
     painter.begin(&printer);
 
@@ -84,14 +80,12 @@ void CvEditor::on_pdfButton_clicked()
     painter.drawEllipse(90, 350, 20, 20);
 
     int maxWidthDesc = 450;
-    QString loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
 
     QFont fontDesc (textFont, 12);
     painter.setFont(fontDesc);
     painter.setPen(textColorInfos);
     QRect textRect(130, 350, maxWidthDesc, 200);
-    painter.drawText(textRect, Qt::TextWordWrap, loremText);
+    painter.drawText(textRect, Qt::TextWordWrap, ui->textEditDesc->toPlainText());
 
 
     // partie formation
@@ -103,8 +97,25 @@ void CvEditor::on_pdfButton_clicked()
 
 
          // définition de la liste des formations
+
+    QString formationA = ui->textEditNomDiplome->toPlainText() + "\n" +
+                         ui->textEditLieuDiplome->toPlainText() + "\n" +
+                         ui->dateEditDiplome->text() + "\n" +
+                         ui->textEditDescDiplome->toPlainText();
+
+    QString formationB = ui->textEditNomDiplome_2->toPlainText() + "\n" +
+                         ui->textEditLieuDiplome_2->toPlainText() + "\n" +
+                         ui->dateEditDiplome_2->text() + "\n" +
+                         ui->textEditDescDiplome_2->toPlainText();
+
+    QString formationC = ui->textEditNomDiplome_3->toPlainText() + "\n" +
+                         ui->textEditLieuDiplome_3->toPlainText() + "\n" +
+                         ui->dateEditDiplome_3->text() + "\n" +
+                         ui->textEditDescDiplome_3->toPlainText();
+
+    // Créer une QStringList pour stocker les informations sur les formations
     QStringList formations;
-    formations << "Formation A \n2018" << "Formation B" << "Formation C";
+    formations << formationA << formationB << formationC;
 
     // Position intiale des foramtions
     int yInitPosForm = 700;
@@ -337,5 +348,17 @@ void CvEditor::on_buttonChoiceFont_clicked()
 void CvEditor::on_pushButton_4_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->page_7);
+}
+
+
+void CvEditor::on_pushButton_6_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_desc);
+}
+
+
+void CvEditor::on_pushButton_7_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageFormations);
 }
 
