@@ -216,13 +216,55 @@ void CvEditor::on_pdfButton_clicked()
     }
 
     // Définition des compétences et de leurs niveaux
+
+    QString competence1 = ui->textEditCompetence->toPlainText();
+    int levelComp1 = ui->spinBoxCompetence->value();
+    if (ui->checkBoxCompetence->isChecked()) {
+        competence1 = NULL;
+        levelComp1 = NULL;
+    }
+
+    QString competence2 = ui->textEditCompetence_2->toPlainText();
+    int levelComp2 = ui->spinBoxCompetence_2->value();
+    if (ui->checkBoxCompetence_2->isChecked()) {
+        competence2 = NULL;
+        levelComp2 = NULL;
+    }
+
+    QString competence3 = ui->textEditCompetence_3->toPlainText();
+    int levelComp3 = ui->spinBoxCompetence_3->value();
+    if (ui->checkBoxCompetence_3->isChecked()) {
+        competence3 = NULL;
+        levelComp3 = NULL;
+    }
+
+    QString competence4 = ui->textEditCompetence_4->toPlainText();
+    int levelComp4 = ui->spinBoxCompetence_4->value();
+    if (ui->checkBoxCompetence_4->isChecked()) {
+        competence4 = NULL;
+        levelComp4 = NULL;
+    }
+
+    QString competence5 = ui->textEditCompetence_5->toPlainText();
+    int levelComp5 = ui->spinBoxCompetence_5->value();
+    if (ui->checkBoxCompetence_5->isChecked()) {
+        competence1 = NULL;
+        levelComp1 = NULL;
+    }
+    QString competence6 = ui->textEditCompetence_6->toPlainText();
+    int levelComp6 = ui->spinBoxCompetence_6->value();
+    if (ui->checkBoxCompetence_6->isChecked()) {
+        competence6 = NULL;
+        levelComp6 = NULL;
+    }
+
     QMap<QString, int> competences;
-    competences.insert("Compétence 1", 80); // Par exemple, niveau de compétence sur 100
-    competences.insert("Compétence 2", 60);
-    competences.insert("Compétence 3", 90);
-    competences.insert("Compétence 4", 80);
-    competences.insert("Compétence 5", 60);
-    competences.insert("Compétence 6", 90);
+    competences.insert(competence1, levelComp1); // Par exemple, niveau de compétence sur 100
+    competences.insert(competence2, levelComp2);
+    competences.insert(competence3, levelComp3);
+    competences.insert(competence4, levelComp4);
+    competences.insert(competence5, levelComp5);
+    competences.insert(competence6, levelComp6);
 
     // Définition des positions pour afficher les compétences et les barres de progression
     int startX = 630;
@@ -237,16 +279,21 @@ void CvEditor::on_pdfButton_clicked()
 
     // Parcourir les compétences et dessiner les noms et les barres de progression
     foreach (const QString &competence, competences.keys()) {
-        // Dessiner le nom de la compétence
-        painter.drawText(startX, startY, competence);
 
-        // Dessiner la barre de progression
-        int niveau = competences.value(competence);
-        QRect barRect(startX, startY + 5, niveau * barWidth / 100, barHeight);
-        painter.fillRect(barRect, primaryColorCV); // Vous pouvez ajuster la couleur de la barre ici
+        if (competence.isNull() || competence.isEmpty()) {
+            startY += 0;
+        } else {
+            // Dessiner le nom de la compétence
+            painter.drawText(startX, startY, competence);
 
-        // Mettre à jour la position Y pour la prochaine compétence
-        startY += barHeight + barMargin;
+            // Dessiner la barre de progression
+            int niveau = competences.value(competence);
+            QRect barRect(startX, startY + 5, niveau * barWidth / 100, barHeight);
+            painter.fillRect(barRect, primaryColorCV); // Vous pouvez ajuster la couleur de la barre ici
+
+            // Mettre à jour la position Y pour la prochaine compétence
+            startY += barHeight + barMargin;
+        }
     }
 
     // Partie description de la personne
@@ -414,5 +461,11 @@ void CvEditor::on_pushButton_8_clicked()
 void CvEditor::on_pushButton_9_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->pagePerso);
+}
+
+
+void CvEditor::on_pushButton_10_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageSkills);
 }
 
