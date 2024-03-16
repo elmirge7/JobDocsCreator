@@ -311,15 +311,34 @@ void CvEditor::on_pdfButton_clicked()
     painter.setPen(textColorInfos);
     painter.drawText(630, 1120, "Loisirs");
 
+    QString loisir1 = ui->textEditActivite->toPlainText();
+    if (ui->checkBoxActivite->isChecked()) {
+        loisir1 = NULL;
+    }
+
+    QString loisir2 = ui->textEditActivite_2->toPlainText();
+    if (ui->checkBoxActivite_2->isChecked()) {
+        loisir2 = NULL;
+    }
+
+    QString loisir3 = ui->textEditActivite_3->toPlainText();
+    if (ui->checkBoxActivite_3->isChecked()) {
+        loisir3 = NULL;
+    }
+
     // définition de la liste des informations personnelles
     QStringList loisirs;
-    loisirs << "Football" << "Voyages" << "Jeux-vidéo";
+    loisirs << loisir1 << loisir2 << loisir3;
 
     // Position intiale des informations
     int yInitPosLoi = 1140;
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &loisir, loisirs) {
+        if (loisir.isNull() || loisir.isEmpty()) {
+            yInitPosLoi += 0;
+        }
+
         painter.drawText(630, yInitPosLoi, loisir);
         yInitPosLoi += 35;
     }
