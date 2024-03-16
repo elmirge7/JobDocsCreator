@@ -137,6 +137,25 @@ void CvEditor::on_pdfButton_clicked()
     painter.drawText(130, 950, "Expériences");
 
 
+    QString experienceA = ui->textEditNomExperience->toPlainText() + "\n" +
+                          ui->textEditLieuExperience->toPlainText() + "\n" +
+                          ui->dateEditExperienceStart->text() + "\n" +
+                          ui->dateEditExperienceEnd->text() + "\n" +
+                          ui->textEditDescExperience->toPlainText();
+
+    QString experienceB = ui->textEditNomExperience_2->toPlainText() + "\n" +
+                          ui->textEditLieuExperience_2->toPlainText() + "\n" +
+                          ui->dateEditExperienceStart_2->text() + "\n" +
+                          ui->dateEditExperienceEnd_2->text() + "\n" +
+                          ui->textEditDescExperience_2->toPlainText();
+
+    QString experienceC = ui->textEditNomExperience_3->toPlainText() + "\n" +
+                          ui->textEditLieuExperience_3->toPlainText() + "\n" +
+                          ui->dateEditExperienceStart_3->text() + "\n" +
+                          ui->dateEditExperienceEnd_3->text() + "\n" +
+                          ui->textEditDescExperience_3->toPlainText();
+
+
     // définition de la liste des formations
     QStringList experiences;
     experiences << "expérience A \n2018" << "expérience B" << "expérience C";
@@ -161,8 +180,14 @@ void CvEditor::on_pdfButton_clicked()
     painter.drawText(630, 370, "Informations");
 
     // définition de la liste des informations personnelles
+
+    QString age = ui->textEditAge->toPlainText();
+    QString phoneNumber = ui->textEditPhoneNumber->toPlainText();
+    QString mail = ui->textEditMail->toPlainText();
+    QString website = ui->textEditWebsite->toPlainText();
+
     QStringList informations;
-    informations << "Age de la personne" << "numéro de tél" << "test@gmail.com";
+    informations << age << phoneNumber << mail << website;
 
     // Position intiale des informations
     int yInitPosInfo = 400;
@@ -360,5 +385,17 @@ void CvEditor::on_pushButton_6_clicked()
 void CvEditor::on_pushButton_7_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->pageFormations);
+}
+
+
+void CvEditor::on_pushButton_8_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageExperiences);
+}
+
+
+void CvEditor::on_pushButton_9_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pagePerso);
 }
 

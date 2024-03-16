@@ -42,6 +42,10 @@ private slots:
 
     void on_pushButton_7_clicked();
 
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
 private:
     Ui::CvEditor *ui;
     QColor primaryColorCV; // Déclaration de la couleur principale du CV
