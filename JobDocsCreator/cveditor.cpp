@@ -134,7 +134,7 @@ void CvEditor::on_pdfButton_clicked()
     painter.drawEllipse(90, 930, 20, 20);
     fontSubTitle.setCapitalization(QFont::AllUppercase);;
     painter.setFont(fontSubTitle);
-    painter.drawText(130, 950, "Expériences");
+    painter.drawText(130, 1000, "Expériences");
 
 
     QString experienceA = ui->textEditNomExperience->toPlainText() + "\n" +
@@ -158,10 +158,10 @@ void CvEditor::on_pdfButton_clicked()
 
     // définition de la liste des formations
     QStringList experiences;
-    experiences << "expérience A \n2018" << "expérience B" << "expérience C";
+    experiences << experienceA << experienceB << experienceC;
 
     // Position intiale des foramtions
-    int yInitPosExp = 1000;
+    int yInitPosExp = 1050;
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &experience, experiences) {
@@ -182,9 +182,22 @@ void CvEditor::on_pdfButton_clicked()
     // définition de la liste des informations personnelles
 
     QString age = ui->textEditAge->toPlainText();
+
+    if (ui->checkBoxAge->isChecked()) {
+        age = NULL;
+    }
     QString phoneNumber = ui->textEditPhoneNumber->toPlainText();
+    if (ui->checkBoxPhoneNumber->isChecked()) {
+        phoneNumber = NULL;
+    }
     QString mail = ui->textEditMail->toPlainText();
+    if (ui->checkBoxMail->isChecked()) {
+        mail = NULL;
+    }
     QString website = ui->textEditWebsite->toPlainText();
+    if (ui->checkBoxWebsite->isChecked()) {
+        website = NULL;
+    }
 
     QStringList informations;
     informations << age << phoneNumber << mail << website;
@@ -194,8 +207,12 @@ void CvEditor::on_pdfButton_clicked()
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &information, informations) {
-        painter.drawText(630, yInitPosInfo, information);
-        yInitPosInfo += 35;
+        if (information.isNull() || information.isEmpty()) {
+            yInitPosInfo += 0;
+        } else {
+            painter.drawText(630, yInitPosInfo, information);
+            yInitPosInfo += 35;
+        }
     }
 
     // Définition des compétences et de leurs niveaux

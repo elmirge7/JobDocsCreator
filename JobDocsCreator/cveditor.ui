@@ -1210,7 +1210,7 @@
       <string>Quel est votre site web ?</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="checkBoxAge">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -1223,7 +1223,7 @@
       <string>Cochez si vous ne souhaitez pas renseigner cette information</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_2">
+    <widget class="QCheckBox" name="checkBoxPhoneNumber">
      <property name="geometry">
       <rect>
        <x>560</x>
@@ -1236,7 +1236,7 @@
       <string>Pareil</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_3">
+    <widget class="QCheckBox" name="checkBoxMail">
      <property name="geometry">
       <rect>
        <x>560</x>
@@ -1249,7 +1249,7 @@
       <string>Pareil</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_4">
+    <widget class="QCheckBox" name="checkBoxWebsite">
      <property name="geometry">
       <rect>
        <x>560</x>
@@ -1270,6 +1270,9 @@
        <width>61</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="placeholderText">
+      <string>ex : 21</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditPhoneNumber">
