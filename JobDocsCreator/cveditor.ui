@@ -1645,7 +1645,157 @@
       </rect>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>30</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Continuer</string>
+     </property>
+    </widget>
    </widget>
+   <widget class="QWidget" name="pageActivity">
+    <widget class="QLabel" name="label_54">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>20</y>
+       <width>63</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Activités</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxActivite">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>70</y>
+       <width>301</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Je ne veux pas cette compétence</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_55">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Activité 1</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEditActivite">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>70</y>
+       <width>104</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxActivite_2">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>140</y>
+       <width>301</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Je ne veux pas cette compétence</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_56">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Activité 2</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEditActivite_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>104</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxActivite_3">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>210</y>
+       <width>301</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Je ne veux pas cette compétence</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_57">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>210</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Activité 3</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEditActivite_3">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>210</y>
+       <width>104</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>30</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Continuer</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pageTemplate"/>
   </widget>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">

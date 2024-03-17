@@ -1,5 +1,6 @@
 #include "cveditor.h"
 #include "ui_cveditor.h"
+#include "dragdroplabel.h"
 
 #include <QPrinter>
 #include <QPrintDialog>
@@ -15,6 +16,64 @@ CvEditor::CvEditor(QWidget *parent)
     , ui(new Ui::CvEditor)
 {
     ui->setupUi(this);
+    m_layout = new QGridLayout;
+
+    m_dragdroplabel1 = new DragDropLabel(true, false);
+    m_dragdroplabel1->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_description.jpg"));
+    m_dragdroplabel1->setScaledContents(true);
+
+    m_dragdroplabel2 = new DragDropLabel(true, false);
+    m_dragdroplabel2->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_formations.jpg"));
+    m_dragdroplabel2->setScaledContents(true);
+
+    m_dragdroplabel3 = new DragDropLabel(true, false);
+    m_dragdroplabel3->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_experiences.jpg"));
+    m_dragdroplabel3->setScaledContents(true);
+
+    m_dragdroplabel4 = new DragDropLabel(true, false);
+    m_dragdroplabel4->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_info_perso.jpg"));
+    m_dragdroplabel4->setScaledContents(true);
+
+    m_dragdroplabel5 = new DragDropLabel(true, false);
+    m_dragdroplabel5->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_competences.jpg"));
+    m_dragdroplabel5->setScaledContents(true);
+
+    m_dragdroplabel6 = new DragDropLabel(true, false);
+    m_dragdroplabel6->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_loisirs.jpg"));
+    m_dragdroplabel6->setScaledContents(true);
+
+
+    m_dragdroplabelresult1 = new DragDropLabel(false, true);
+    m_dragdroplabelresult1->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult2 = new DragDropLabel(false, true);
+    m_dragdroplabelresult2->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult3 = new DragDropLabel(false, true);
+    m_dragdroplabelresult3->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult4 = new DragDropLabel(false, true);
+    m_dragdroplabelresult4->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult5 = new DragDropLabel(false, true);
+    m_dragdroplabelresult5->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult6 = new DragDropLabel(false, true);
+    m_dragdroplabelresult6->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+
+    m_layout->addWidget(m_dragdroplabel1,0,0);
+    m_layout->addWidget(m_dragdroplabel2,1,0);
+    m_layout->addWidget(m_dragdroplabel3,2,0);
+    m_layout->addWidget(m_dragdroplabel4,3,0);
+    m_layout->addWidget(m_dragdroplabel5,4,0);
+    m_layout->addWidget(m_dragdroplabel6,5,0);
+    m_layout->addWidget(m_dragdroplabelresult1,1,1);
+    m_layout->addWidget(m_dragdroplabelresult2,1,2);
+    m_layout->addWidget(m_dragdroplabelresult3,2,1);
+    m_layout->addWidget(m_dragdroplabelresult4,2,2);
+    m_layout->addWidget(m_dragdroplabelresult5,3,1);
+    m_layout->addWidget(m_dragdroplabelresult6,3,2);
+
+    int pageIndex = ui->stackedWidget->indexOf(ui->pageTemplate);
+    if (pageIndex != -1) {
+        QWidget *page = ui->stackedWidget->widget(pageIndex);
+        page->setLayout(m_layout);
+    }
 }
 
 CvEditor::~CvEditor()
@@ -486,5 +545,17 @@ void CvEditor::on_pushButton_9_clicked()
 void CvEditor::on_pushButton_10_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->pageSkills);
+}
+
+
+void CvEditor::on_pushButton_11_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageActivity);
+}
+
+
+void CvEditor::on_pushButton_12_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageTemplate);
 }
 

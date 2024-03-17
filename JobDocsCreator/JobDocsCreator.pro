@@ -10,11 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     cveditor.cpp \
+    dragdroplabel.cpp \
     main.cpp \
     mainwindow.cpp \
 
 HEADERS += \
     cveditor.h \
+    dragdroplabel.h \
     mainwindow.h
 
 FORMS += \

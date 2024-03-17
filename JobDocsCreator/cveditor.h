@@ -2,6 +2,10 @@
 #define CVEDITOR_H
 
 #include <QDialog>
+#include <QObject>
+#include <QLabel>
+#include <QGridLayout>
+#include "dragdroplabel.h"
 
 namespace Ui {
 class CvEditor;
@@ -48,6 +52,10 @@ private slots:
 
     void on_pushButton_10_clicked();
 
+    void on_pushButton_11_clicked();
+
+    void on_pushButton_12_clicked();
+
 private:
     Ui::CvEditor *ui;
     QColor primaryColorCV; // Déclaration de la couleur principale du CV
@@ -57,6 +65,22 @@ private:
     QString textFont; // Déclaration de la police utilisée dans le CV
     QString jobName; // Déclaration du métier recherché dans le CV
     QString description; // Déclaration de la description dans le CV
+
+protected:
+    QGridLayout *m_layout;
+    DragDropLabel *m_dragdroplabel1;
+    DragDropLabel *m_dragdroplabel2;
+    DragDropLabel *m_dragdroplabel3;
+    DragDropLabel *m_dragdroplabel4;
+    DragDropLabel *m_dragdroplabel5;
+    DragDropLabel *m_dragdroplabel6;
+    DragDropLabel *m_dragdroplabelresult1;
+    DragDropLabel *m_dragdroplabelresult2;
+    DragDropLabel *m_dragdroplabelresult3;
+    DragDropLabel *m_dragdroplabelresult4;
+    DragDropLabel *m_dragdroplabelresult5;
+    DragDropLabel *m_dragdroplabelresult6;
+
 };
 
 #endif // CVEDITOR_H
