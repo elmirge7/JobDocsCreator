@@ -66,6 +66,18 @@ void DragDropLabel::dropEvent(QDropEvent *event)
         dataStream >> pixmap >> offset;
         
         this->setPixmap(pixmap);
+
+        qInfo() << "pixmap de dropevent : " << pixmap.toImage();
+        imageResult = pixmap.toImage();
+
+
+        // if (result == start) {
+        //     qDebug() << "Le start et le result sont identiques";
+        // } else {
+        //     qDebug() << "Ils ne le sont pas"
+        //              << "Voici start : " << start
+        //              << "et voici result : " << result;
+        // }
         
         if (event->source() == this)
         {
@@ -79,7 +91,7 @@ void DragDropLabel::dropEvent(QDropEvent *event)
     else
     {
         event->ignore();
-    }
+    }    
 }
 
 void DragDropLabel::mousePressEvent(QMouseEvent *event)
@@ -94,10 +106,11 @@ void DragDropLabel::mousePressEvent(QMouseEvent *event)
         QByteArray itemData;
         QDataStream dataStream(&itemData, QIODevice::WriteOnly);
         dataStream << pixmap << QPoint(event->pos());
+
         
         QMimeData *mimeData = new QMimeData;
         mimeData->setData("application/x-dnditemdata", itemData);
-        
+                
         QDrag *drag = new QDrag(this);
         drag->setMimeData(mimeData);
         drag->setPixmap(pixmap);
@@ -119,6 +132,8 @@ void DragDropLabel::mousePressEvent(QMouseEvent *event)
         {
             child->show();
             child->setPixmap(pixmap);
+            qInfo() << "pixmap de mousepressevent : " << pixmap.toImage();
+            imageStart = pixmap.toImage();
         }
     }
 }

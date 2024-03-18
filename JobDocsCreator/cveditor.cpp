@@ -18,43 +18,34 @@ CvEditor::CvEditor(QWidget *parent)
     ui->setupUi(this);
     m_layout = new QGridLayout;
 
+    // Création des objets DragDropLabel
     m_dragdroplabel1 = new DragDropLabel(true, false);
-    m_dragdroplabel1->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_description.jpg"));
-    m_dragdroplabel1->setScaledContents(true);
-
     m_dragdroplabel2 = new DragDropLabel(true, false);
-    m_dragdroplabel2->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_formations.jpg"));
-    m_dragdroplabel2->setScaledContents(true);
-
     m_dragdroplabel3 = new DragDropLabel(true, false);
-    m_dragdroplabel3->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_experiences.jpg"));
-    m_dragdroplabel3->setScaledContents(true);
-
     m_dragdroplabel4 = new DragDropLabel(true, false);
-    m_dragdroplabel4->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_info_perso.jpg"));
-    m_dragdroplabel4->setScaledContents(true);
-
     m_dragdroplabel5 = new DragDropLabel(true, false);
-    m_dragdroplabel5->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_competences.jpg"));
-    m_dragdroplabel5->setScaledContents(true);
-
     m_dragdroplabel6 = new DragDropLabel(true, false);
-    m_dragdroplabel6->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_loisirs.jpg"));
-    m_dragdroplabel6->setScaledContents(true);
-
-
     m_dragdroplabelresult1 = new DragDropLabel(false, true);
-    m_dragdroplabelresult1->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
     m_dragdroplabelresult2 = new DragDropLabel(false, true);
-    m_dragdroplabelresult2->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
     m_dragdroplabelresult3 = new DragDropLabel(false, true);
-    m_dragdroplabelresult3->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
     m_dragdroplabelresult4 = new DragDropLabel(false, true);
-    m_dragdroplabelresult4->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
     m_dragdroplabelresult5 = new DragDropLabel(false, true);
-    m_dragdroplabelresult5->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
     m_dragdroplabelresult6 = new DragDropLabel(false, true);
+
+    // Assignation des pixmap aux objets DragDropLabel
+    m_dragdroplabel1->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_description.jpg"));
+    m_dragdroplabel2->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_formations.jpg"));
+    m_dragdroplabel3->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_experiences.jpg"));
+    m_dragdroplabel4->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_info_perso.jpg"));
+    m_dragdroplabel5->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_competences.jpg"));
+    m_dragdroplabel6->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_loisirs.jpg"));
+    m_dragdroplabelresult1->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult2->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult3->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult4->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+    m_dragdroplabelresult5->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
     m_dragdroplabelresult6->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
+
 
     m_layout->addWidget(m_dragdroplabel1,0,0);
     m_layout->addWidget(m_dragdroplabel2,1,0);
@@ -74,6 +65,81 @@ CvEditor::CvEditor(QWidget *parent)
         QWidget *page = ui->stackedWidget->widget(pageIndex);
         page->setLayout(m_layout);
     }
+
+    // les images de base
+
+    start1previous = m_dragdroplabel1->imageStart;
+
+    m_dragdroplabel1->setScaledContents(true);
+    if (m_dragdroplabel1->imageStart != start1previous) {
+        start1next = m_dragdroplabel1->imageStart;
+    }
+
+    start2previous = m_dragdroplabel2->imageStart;
+    m_dragdroplabel2->setScaledContents(true);
+    if (m_dragdroplabel2->imageStart != start2previous) {
+        start2next = m_dragdroplabel2->imageStart;
+    }
+
+    start3previous = m_dragdroplabel3->imageStart;
+    m_dragdroplabel3->setScaledContents(true);
+    if (m_dragdroplabel3->imageStart != start3previous) {
+        start3next = m_dragdroplabel3->imageStart;
+    }
+
+    start4previous = m_dragdroplabel4->imageStart;
+    m_dragdroplabel4->setScaledContents(true);
+    if (m_dragdroplabel4->imageStart != start4previous) {
+        start4next = m_dragdroplabel4->imageStart;
+    }
+
+    start5previous = m_dragdroplabel5->imageStart;
+    m_dragdroplabel5->setScaledContents(true);
+    if (m_dragdroplabel5->imageStart != start5previous) {
+        start5next = m_dragdroplabel5->imageStart;
+    }
+
+    start6previous = m_dragdroplabel6->imageStart;
+    m_dragdroplabel6->setScaledContents(true);
+    if (m_dragdroplabel6->imageStart != start6previous) {
+        start6next = m_dragdroplabel6->imageStart;
+    }
+
+    // Les résultats
+
+    result1previous = m_dragdroplabelresult1->imageResult;
+    if (m_dragdroplabelresult1->imageResult != result1previous || m_dragdroplabelresult1->imageResult != result1next) {
+        result1next = m_dragdroplabelresult1->imageResult;
+    }
+
+
+
+    result2previous = m_dragdroplabelresult2->imageResult;
+    if (m_dragdroplabelresult2->imageResult != result2previous || m_dragdroplabelresult2->imageResult != result2next) {
+        result2next = m_dragdroplabelresult2->imageResult;
+    }
+
+
+    result3previous = m_dragdroplabelresult3->imageResult;
+    if (m_dragdroplabelresult3->imageResult != result3previous || m_dragdroplabelresult3->imageResult != result3next) {
+        result3next = m_dragdroplabelresult3->imageResult;
+    }
+
+    result4previous = m_dragdroplabelresult4->imageResult;
+    if (m_dragdroplabelresult4->imageResult != result4previous || m_dragdroplabelresult4->imageResult != result4next) {
+        result4next = m_dragdroplabelresult4->imageResult;
+    }
+
+    result5previous = m_dragdroplabelresult5->imageResult;
+    if (m_dragdroplabelresult5->imageResult != result5previous || m_dragdroplabelresult5->imageResult != result5next) {
+        result5next = m_dragdroplabelresult5->imageResult;
+    }
+
+    result6previous = m_dragdroplabelresult6->imageResult;
+    if (m_dragdroplabelresult6->imageResult != result6previous || m_dragdroplabelresult6->imageResult != result6next) {
+        result6next = m_dragdroplabelresult6->imageResult;
+    }
+
 }
 
 CvEditor::~CvEditor()
@@ -94,6 +160,212 @@ void CvEditor::on_pdfButton_clicked()
 
     QPainter painter;
     painter.begin(&printer);
+
+    int positionDescX;
+    int positionDescY;
+
+    int positionFormationX;
+    int positionFormationY;
+
+    int positionExperienceX;
+    int positionExperienceY;
+
+    int positionInfoPersoX;
+    int positionInfoPersoY;
+
+    int positionCompetenceX;
+    int positionCompetenceY;
+
+    int positionLoisirX;
+    int positionLoisirY;
+
+
+    // Calcul des positions
+    switch (positionDescription) {
+    case 1:
+        positionDescX = 90;
+        positionDescY = 350;
+        break;
+    case 2:
+        positionDescX = 630;
+        positionDescY = 370;
+        break;
+    case 3:
+        positionDescX = 130;
+        positionDescY = 650;
+        break;
+    case 4:
+        positionDescX = 630;
+        positionDescY = 670;
+        break;
+    case 5:
+        positionDescX = 130;
+        positionDescY = 1000;
+        break;
+    case 6:
+        positionDescX = 630;
+        positionDescY = 1000;
+        break;
+    default:
+        positionDescX = 9999;
+        positionDescY = 9999;
+        break;
+    }
+
+    switch (positionFormation) {
+    case 1:
+        positionFormationX = 90;
+        positionFormationY = 350;
+        break;
+    case 2:
+        positionFormationX = 630;
+        positionFormationY = 370;
+        break;
+    case 3:
+        positionFormationX = 130;
+        positionFormationY = 650;
+        break;
+    case 4:
+        positionFormationX = 630;
+        positionFormationY = 670;
+        break;
+    case 5:
+        positionFormationX = 130;
+        positionFormationY = 1000;
+        break;
+    case 6:
+        positionFormationX = 630;
+        positionFormationY = 1000;
+        break;
+    default:
+        positionFormationX = 9999;
+        positionFormationY = 9999;
+        break;
+    }
+
+    switch (positionExperience) {
+    case 1:
+        positionExperienceX = 90;
+        positionExperienceY = 350;
+        break;
+    case 2:
+        positionExperienceX = 630;
+        positionExperienceY = 370;
+        break;
+    case 3:
+        positionExperienceX = 130;
+        positionExperienceY = 650;
+        break;
+    case 4:
+        positionExperienceX = 630;
+        positionExperienceY = 670;
+        break;
+    case 5:
+        positionExperienceX = 130;
+        positionExperienceY = 1000;
+        break;
+    case 6:
+        positionExperienceX = 630;
+        positionExperienceY = 1000;
+        break;
+    default:
+        positionExperienceX = 9999;
+        positionExperienceY = 9999;
+        break;
+    }
+
+    switch (positionInfoPerso) {
+    case 1:
+        positionInfoPersoX = 90;
+        positionInfoPersoY = 350;
+        break;
+    case 2:
+        positionInfoPersoX = 630;
+        positionInfoPersoY = 370;
+        break;
+    case 3:
+        positionInfoPersoX = 130;
+        positionInfoPersoY = 650;
+        break;
+    case 4:
+        positionInfoPersoX = 630;
+        positionInfoPersoY = 670;
+        break;
+    case 5:
+        positionInfoPersoX = 130;
+        positionInfoPersoY = 1000;
+        break;
+    case 6:
+        positionInfoPersoX = 630;
+        positionInfoPersoY = 1000;
+        break;
+    default:
+        positionInfoPersoX = 9999;
+        positionInfoPersoY = 9999;
+        break;
+    }
+
+    switch (positionCompetence) {
+    case 1:
+        positionCompetenceX = 90;
+        positionCompetenceY = 350;
+        break;
+    case 2:
+        positionCompetenceX = 630;
+        positionCompetenceY = 370;
+        break;
+    case 3:
+        positionCompetenceX = 130;
+        positionCompetenceY = 650;
+        break;
+    case 4:
+        positionCompetenceX = 630;
+        positionCompetenceY = 670;
+        break;
+    case 5:
+        positionCompetenceX = 130;
+        positionCompetenceY = 1000;
+        break;
+    case 6:
+        positionCompetenceX = 630;
+        positionCompetenceY = 1000;
+        break;
+    default:
+        positionCompetenceX = 9999;
+        positionCompetenceY = 9999;
+        break;
+    }
+
+    switch (positionLoisir) {
+    case 1:
+        positionLoisirX = 90;
+        positionLoisirY = 350;
+        break;
+    case 2:
+        positionLoisirX = 630;
+        positionLoisirY = 370;
+        break;
+    case 3:
+        positionLoisirX = 130;
+        positionLoisirY = 650;
+        break;
+    case 4:
+        positionLoisirX = 630;
+        positionLoisirY = 670;
+        break;
+    case 5:
+        positionLoisirX = 130;
+        positionLoisirY = 1000;
+        break;
+    case 6:
+        positionLoisirX = 630;
+        positionLoisirY = 1000;
+        break;
+    default:
+        positionLoisirX = 9999;
+        positionLoisirY = 9999;
+        break;
+    }
 
     // Création de l'en-tête
 
@@ -143,7 +415,7 @@ void CvEditor::on_pdfButton_clicked()
     QFont fontDesc (textFont, 12);
     painter.setFont(fontDesc);
     painter.setPen(textColorInfos);
-    QRect textRect(130, 350, maxWidthDesc, 200);
+    QRect textRect(positionDescX, positionDescY, maxWidthDesc, 200);
     painter.drawText(textRect, Qt::TextWordWrap, ui->textEditDesc->toPlainText());
 
 
@@ -152,7 +424,7 @@ void CvEditor::on_pdfButton_clicked()
     QFont fontSubTitle (textFont, 14);
     fontSubTitle.setCapitalization(QFont::AllUppercase);;
     painter.setFont(fontSubTitle);
-    painter.drawText(130, 650, "Formations");
+    painter.drawText(positionFormationX, positionFormationY, "Formations");
 
 
          // définition de la liste des formations
@@ -177,14 +449,14 @@ void CvEditor::on_pdfButton_clicked()
     formations << formationA << formationB << formationC;
 
     // Position intiale des foramtions
-    int yInitPosForm = 700;
+    int yInitPosForm = positionFormationY + 50;
     QFont fontSubTitleList (textFont, 12);
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &formation, formations) {
         QStringList lines = formation.split("\n");
         foreach (const QString &line, lines) {
-            painter.drawText(130, yInitPosForm, line);
+            painter.drawText(positionFormationX, yInitPosForm, line);
             yInitPosForm += 25;
         }
     }
@@ -193,7 +465,7 @@ void CvEditor::on_pdfButton_clicked()
     painter.drawEllipse(90, 930, 20, 20);
     fontSubTitle.setCapitalization(QFont::AllUppercase);;
     painter.setFont(fontSubTitle);
-    painter.drawText(130, 1000, "Expériences");
+    painter.drawText(positionExperienceX, positionExperienceY, "Expériences");
 
 
     QString experienceA = ui->textEditNomExperience->toPlainText() + "\n" +
@@ -220,23 +492,23 @@ void CvEditor::on_pdfButton_clicked()
     experiences << experienceA << experienceB << experienceC;
 
     // Position intiale des foramtions
-    int yInitPosExp = 1050;
+    int yInitPosExp = positionExperienceY + 50;
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &experience, experiences) {
         QStringList lines = experience.split("\n");
         foreach (const QString &line, lines) {
-            painter.drawText(130, yInitPosExp, line);
+            painter.drawText(positionExperienceX, yInitPosExp, line);
             yInitPosExp += 25;
         }
     }
 
-    // Partie description de la personne
+    // Partie informations perso de la personne
     painter.drawEllipse(590, 350, 20, 20);
 
     painter.setFont(fontSubTitle);
     painter.setPen(textColorInfos);
-    painter.drawText(630, 370, "Informations");
+    painter.drawText(positionInfoPersoX, positionInfoPersoY, "Informations");
 
     // définition de la liste des informations personnelles
 
@@ -262,14 +534,14 @@ void CvEditor::on_pdfButton_clicked()
     informations << age << phoneNumber << mail << website;
 
     // Position intiale des informations
-    int yInitPosInfo = 400;
+    int yInitPosInfo = positionInfoPersoY + 50;
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &information, informations) {
         if (information.isNull() || information.isEmpty()) {
             yInitPosInfo += 0;
         } else {
-            painter.drawText(630, yInitPosInfo, information);
+            painter.drawText(positionInfoPersoX, yInitPosInfo, information);
             yInitPosInfo += 35;
         }
     }
@@ -326,8 +598,8 @@ void CvEditor::on_pdfButton_clicked()
     competences.insert(competence6, levelComp6);
 
     // Définition des positions pour afficher les compétences et les barres de progression
-    int startX = 630;
-    int startY = 710;
+    int startX = positionCompetenceX;
+    int startY = positionCompetenceY + 50;
     int barWidth = 200;
     int barHeight = 20;
     int barMargin = 50;
@@ -360,7 +632,7 @@ void CvEditor::on_pdfButton_clicked()
 
     painter.setFont(fontSubTitle);
     painter.setPen(textColorInfos);
-    painter.drawText(630, 670, "Compétences");
+    painter.drawText(positionCompetenceX, positionCompetenceY, "Compétences");
 
 
     // Partie loisirs
@@ -368,7 +640,7 @@ void CvEditor::on_pdfButton_clicked()
 
     painter.setFont(fontSubTitle);
     painter.setPen(textColorInfos);
-    painter.drawText(630, 1120, "Loisirs");
+    painter.drawText(positionLoisirX, positionLoisirY, "Loisirs");
 
     QString loisir1 = ui->textEditActivite->toPlainText();
     if (ui->checkBoxActivite->isChecked()) {
@@ -390,7 +662,7 @@ void CvEditor::on_pdfButton_clicked()
     loisirs << loisir1 << loisir2 << loisir3;
 
     // Position intiale des informations
-    int yInitPosLoi = 1140;
+    int yInitPosLoi = positionLoisirY + 50;
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &loisir, loisirs) {
@@ -398,7 +670,7 @@ void CvEditor::on_pdfButton_clicked()
             yInitPosLoi += 0;
         }
 
-        painter.drawText(630, yInitPosLoi, loisir);
+        painter.drawText(positionLoisirX, yInitPosLoi, loisir);
         yInitPosLoi += 35;
     }
 
@@ -557,5 +829,178 @@ void CvEditor::on_pushButton_11_clicked()
 void CvEditor::on_pushButton_12_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->pageTemplate);
+}
+
+
+void CvEditor::on_pushButton_13_clicked()
+{
+
+
+
+    if (m_dragdroplabel1->pixmap().toImage() == m_dragdroplabelresult1->pixmap().toImage())
+    {
+        positionDescription = 1;
+    }
+    else if (m_dragdroplabel1->pixmap().toImage() == m_dragdroplabelresult2->pixmap().toImage())
+    {
+        positionDescription = 2;
+    }
+    else if (m_dragdroplabel1->pixmap().toImage() == m_dragdroplabelresult3->pixmap().toImage())
+    {
+        positionDescription = 3;
+    }
+    else if (m_dragdroplabel1->pixmap().toImage() == m_dragdroplabelresult4->pixmap().toImage())
+    {
+        positionDescription = 4;
+    }
+    else if (m_dragdroplabel1->pixmap().toImage() == m_dragdroplabelresult5->pixmap().toImage())
+    {
+        positionDescription = 5;
+    }
+    else if (m_dragdroplabel1->pixmap().toImage() == m_dragdroplabelresult6->pixmap().toImage())
+    {
+        positionDescription = 6;
+    }
+
+    if (m_dragdroplabel2->pixmap().toImage() == m_dragdroplabelresult1->pixmap().toImage())
+    {
+        positionFormation = 1;
+    }
+    else if (m_dragdroplabel2->pixmap().toImage() == m_dragdroplabelresult2->pixmap().toImage())
+    {
+        positionFormation = 2;
+    }
+    else if (m_dragdroplabel2->pixmap().toImage() == m_dragdroplabelresult3->pixmap().toImage())
+    {
+        positionFormation = 3;
+    }
+    else if (m_dragdroplabel2->pixmap().toImage() == m_dragdroplabelresult4->pixmap().toImage())
+    {
+        positionFormation = 4;
+    }
+    else if (m_dragdroplabel2->pixmap().toImage() == m_dragdroplabelresult5->pixmap().toImage())
+    {
+        positionFormation = 5;
+    }
+    else if (m_dragdroplabel2->pixmap().toImage() == m_dragdroplabelresult6->pixmap().toImage())
+    {
+        positionFormation = 6;
+    }
+
+    // Pour m_dragdroplabel3
+    if (m_dragdroplabel3->pixmap().toImage() == m_dragdroplabelresult1->pixmap().toImage())
+    {
+        positionExperience = 1;
+    }
+    else if (m_dragdroplabel3->pixmap().toImage() == m_dragdroplabelresult2->pixmap().toImage())
+    {
+        positionExperience = 2;
+    }
+    else if (m_dragdroplabel3->pixmap().toImage() == m_dragdroplabelresult3->pixmap().toImage())
+    {
+        positionExperience = 3;
+    }
+    else if (m_dragdroplabel3->pixmap().toImage() == m_dragdroplabelresult4->pixmap().toImage())
+    {
+        positionExperience = 4;
+    }
+    else if (m_dragdroplabel3->pixmap().toImage() == m_dragdroplabelresult5->pixmap().toImage())
+    {
+        positionExperience = 5;
+    }
+    else if (m_dragdroplabel3->pixmap().toImage() == m_dragdroplabelresult6->pixmap().toImage())
+    {
+        positionExperience = 6;
+    }
+
+    // Pour m_dragdroplabel4
+    if (m_dragdroplabel4->pixmap().toImage() == m_dragdroplabelresult1->pixmap().toImage())
+    {
+        positionInfoPerso = 1;
+    }
+    else if (m_dragdroplabel4->pixmap().toImage() == m_dragdroplabelresult2->pixmap().toImage())
+    {
+        positionInfoPerso = 2;
+    }
+    else if (m_dragdroplabel4->pixmap().toImage() == m_dragdroplabelresult3->pixmap().toImage())
+    {
+        positionInfoPerso = 3;
+    }
+    else if (m_dragdroplabel4->pixmap().toImage() == m_dragdroplabelresult4->pixmap().toImage())
+    {
+        positionInfoPerso = 4;
+    }
+    else if (m_dragdroplabel4->pixmap().toImage() == m_dragdroplabelresult5->pixmap().toImage())
+    {
+        positionInfoPerso = 5;
+    }
+    else if (m_dragdroplabel4->pixmap().toImage() == m_dragdroplabelresult6->pixmap().toImage())
+    {
+        positionInfoPerso = 6;
+    }
+
+    // Pour m_dragdroplabel5
+    if (m_dragdroplabel5->pixmap().toImage() == m_dragdroplabelresult1->pixmap().toImage())
+    {
+        positionCompetence = 1;
+    }
+    else if (m_dragdroplabel5->pixmap().toImage() == m_dragdroplabelresult2->pixmap().toImage())
+    {
+        positionCompetence = 2;
+    }
+    else if (m_dragdroplabel5->pixmap().toImage() == m_dragdroplabelresult3->pixmap().toImage())
+    {
+        positionCompetence = 3;
+    }
+    else if (m_dragdroplabel5->pixmap().toImage() == m_dragdroplabelresult4->pixmap().toImage())
+    {
+        positionCompetence = 4;
+    }
+    else if (m_dragdroplabel5->pixmap().toImage() == m_dragdroplabelresult5->pixmap().toImage())
+    {
+        positionCompetence = 5;
+    }
+    else if (m_dragdroplabel5->pixmap().toImage() == m_dragdroplabelresult6->pixmap().toImage())
+    {
+        positionCompetence = 6;
+    }
+
+    // Pour m_dragdroplabel6
+    if (m_dragdroplabel6->pixmap().toImage() == m_dragdroplabelresult1->pixmap().toImage())
+    {
+        positionLoisir = 1;
+    }
+    else if (m_dragdroplabel6->pixmap().toImage() == m_dragdroplabelresult2->pixmap().toImage())
+    {
+        positionLoisir = 2;
+    }
+    else if (m_dragdroplabel6->pixmap().toImage() == m_dragdroplabelresult3->pixmap().toImage())
+    {
+        positionLoisir = 3;
+    }
+    else if (m_dragdroplabel6->pixmap().toImage() == m_dragdroplabelresult4->pixmap().toImage())
+    {
+        positionLoisir = 4;
+    }
+    else if (m_dragdroplabel6->pixmap().toImage() == m_dragdroplabelresult5->pixmap().toImage())
+    {
+        positionLoisir = 5;
+    }
+    else if (m_dragdroplabel6->pixmap().toImage() == m_dragdroplabelresult6->pixmap().toImage())
+    {
+        positionLoisir = 6;
+    }
+
+
+    qInfo() << "DESCRIPTION EST EN POSITION " << positionDescription
+            << "FORMATION EST EN POSITION " << positionFormation
+            << "EXPERIENCE EST EN POSITION " << positionExperience
+            << "INFOPERSO EST EN POSITION " << positionInfoPerso
+            << "COMPETENCE EST EN POSITION " << positionCompetence
+            << "Loisir EST EN POSITION " << positionLoisir
+        ;
+
+
+
 }
 
