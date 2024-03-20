@@ -17,65 +17,62 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>110</y>
+     <y>30</y>
      <width>701</width>
-     <height>291</height>
+     <height>491</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Poppins</family>
+    </font>
+   </property>
    <property name="currentIndex">
-    <number>11</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page_3">
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>20</y>
-       <width>201</width>
-       <height>20</height>
+       <x>100</x>
+       <y>80</y>
+       <width>521</width>
+       <height>151</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Choix du modèle de CV (1/?)</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>170</y>
-       <width>111</width>
-       <height>26</height>
-      </rect>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
      </property>
      <property name="text">
-      <string>Modèle 1</string>
+      <string>
+Bienvenue sur notre JobDocs !
+Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon endroit. Répondez à quelques questions et laissez-nous vous aider à créer un CV professionnel en un rien de temps.</string>
      </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton_2">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>170</y>
-       <width>111</width>
-       <height>26</height>
-      </rect>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
-     <property name="text">
-      <string>Modèle 2</string>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>220</y>
-       <width>83</width>
+       <x>300</x>
+       <y>300</y>
+       <width>121</width>
        <height>29</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>Continuer</string>
+      <string>Commencer</string>
      </property>
     </widget>
    </widget>
@@ -83,24 +80,37 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>20</y>
-       <width>161</width>
+       <x>250</x>
+       <y>40</y>
+       <width>211</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>Choix des couleurs (2/?)</string>
+      <string>Choix des couleurs</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>210</y>
-       <width>83</width>
+       <x>310</x>
+       <y>410</y>
+       <width>101</width>
        <height>29</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
      </property>
      <property name="text">
       <string>Continuer</string>
@@ -109,130 +119,162 @@
     <widget class="QPushButton" name="buttonChoiceColor">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>50</y>
-       <width>201</width>
+       <x>140</x>
+       <y>170</y>
+       <width>231</width>
        <height>29</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>choisir une couleur du fond</string>
+      <string>Couleur principale</string>
      </property>
     </widget>
     <widget class="QLabel" name="colorLabel">
      <property name="geometry">
       <rect>
-       <x>220</x>
-       <y>50</y>
-       <width>111</width>
+       <x>390</x>
+       <y>170</y>
+       <width>121</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>Couleur du rect</string>
+      <string>Couleur choisie</string>
      </property>
     </widget>
     <widget class="QPushButton" name="buttonChoiceColorName">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>90</y>
-       <width>201</width>
+       <x>140</x>
+       <y>210</y>
+       <width>231</width>
        <height>29</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>couleur prénom - nom</string>
+      <string>Couleur des prénom/nom</string>
      </property>
     </widget>
     <widget class="QLabel" name="colorLabelName">
      <property name="geometry">
       <rect>
-       <x>220</x>
-       <y>90</y>
-       <width>111</width>
+       <x>390</x>
+       <y>210</y>
+       <width>131</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>prénom nom</string>
+      <string>Couleur choisie</string>
      </property>
     </widget>
     <widget class="QPushButton" name="buttonChoiceColorJob">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>130</y>
-       <width>201</width>
+       <x>140</x>
+       <y>250</y>
+       <width>231</width>
        <height>29</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>couleur métier</string>
+      <string>Couleur du sous-titre</string>
      </property>
     </widget>
     <widget class="QLabel" name="colorLabelJob">
      <property name="geometry">
       <rect>
-       <x>220</x>
-       <y>130</y>
-       <width>111</width>
+       <x>390</x>
+       <y>250</y>
+       <width>131</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>métier</string>
+      <string>Couleur choisie</string>
      </property>
     </widget>
     <widget class="QPushButton" name="buttonChoiceColorInfos">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>170</y>
-       <width>201</width>
+       <x>140</x>
+       <y>290</y>
+       <width>231</width>
        <height>29</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>couleur description</string>
+      <string>Couleur du texte</string>
      </property>
     </widget>
     <widget class="QLabel" name="colorLabelInfos">
      <property name="geometry">
       <rect>
-       <x>220</x>
-       <y>170</y>
-       <width>111</width>
+       <x>390</x>
+       <y>290</y>
+       <width>121</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>description</string>
+      <string>Couleur choisie</string>
      </property>
     </widget>
    </widget>
    <widget class="QWidget" name="page_5">
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>20</y>
-       <width>161</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Choix de la police (3/)</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>210</y>
-       <width>83</width>
+       <x>310</x>
+       <y>410</y>
+       <width>111</width>
        <height>29</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
      </property>
      <property name="text">
       <string>Continuer</string>
@@ -241,11 +283,16 @@
     <widget class="QPushButton" name="buttonChoiceFont">
      <property name="geometry">
       <rect>
-       <x>52</x>
-       <y>90</y>
-       <width>131</width>
+       <x>210</x>
+       <y>220</y>
+       <width>151</width>
        <height>29</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
      </property>
      <property name="text">
       <string>Choisir la police</string>
@@ -254,14 +301,40 @@
     <widget class="QLabel" name="labelFont">
      <property name="geometry">
       <rect>
-       <x>220</x>
-       <y>100</y>
+       <x>390</x>
+       <y>220</y>
        <width>141</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
       <string>Police choisie</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_58">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>40</y>
+       <width>211</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Choix de la police</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -269,24 +342,37 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>20</y>
-       <width>191</width>
+       <x>210</x>
+       <y>40</y>
+       <width>311</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>Informations personnelles 4/</string>
+      <string>Informations personnelles</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>80</y>
+       <x>240</x>
+       <y>170</y>
        <width>63</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
      </property>
      <property name="text">
       <string>Prénom</string>
@@ -295,21 +381,34 @@
     <widget class="QTextEdit" name="nameText">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>100</y>
-       <width>191</width>
+       <x>240</x>
+       <y>190</y>
+       <width>241</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="placeholderText">
+      <string>Makoto</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>150</y>
+       <x>240</x>
+       <y>240</y>
        <width>63</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
      </property>
      <property name="text">
       <string>Nom</string>
@@ -318,24 +417,117 @@
     <widget class="QTextEdit" name="surnameText">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>170</y>
-       <width>191</width>
+       <x>240</x>
+       <y>260</y>
+       <width>241</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="placeholderText">
+      <string>Naegi</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>220</y>
-       <width>83</width>
+       <x>310</x>
+       <y>410</y>
+       <width>111</width>
        <height>29</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
       <string>Continuer</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pagePhoto">
+    <widget class="QPushButton" name="pushButton_14">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>410</y>
+       <width>111</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Continuer</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_59">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>40</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Photographie</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>180</y>
+       <width>191</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Insérer une photo</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPhoto">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>250</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Photo choisie </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -343,37 +535,76 @@
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>82</x>
-       <y>20</y>
+       <x>220</x>
+       <y>210</y>
        <width>171</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>Quel métier cherche tu ?</string>
+      <string>Métier</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="jobEdit">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>80</y>
+       <x>220</x>
+       <y>230</y>
        <width>271</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="placeholderText">
+      <string>Stage en informatique</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>200</y>
-       <width>83</width>
+       <x>300</x>
+       <y>420</y>
+       <width>101</width>
        <height>29</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
       <string>Continuer</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_60">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>50</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Métier recherché (sous-titre)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -381,9 +612,9 @@
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>142</x>
-       <y>30</y>
-       <width>81</width>
+       <x>200</x>
+       <y>160</y>
+       <width>101</width>
        <height>20</height>
       </rect>
      </property>
@@ -394,8 +625,8 @@
     <widget class="QTextEdit" name="textEditDesc">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>60</y>
+       <x>200</x>
+       <y>180</y>
        <width>321</width>
        <height>161</height>
       </rect>
@@ -404,8 +635,8 @@
     <widget class="QPushButton" name="pushButton_7">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>230</y>
+       <x>320</x>
+       <y>440</y>
        <width>83</width>
        <height>29</height>
       </rect>
@@ -414,78 +645,76 @@
       <string>Continuer</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QWidget" name="pageFormations">
-    <widget class="QLabel" name="label_9">
+    <widget class="QLabel" name="label_61">
      <property name="geometry">
       <rect>
-       <x>82</x>
-       <y>10</y>
-       <width>141</width>
-       <height>20</height>
+       <x>210</x>
+       <y>30</y>
+       <width>311</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
      <property name="text">
-      <string>Formation 1</string>
+      <string>Décrivez-vous en quelques mots !</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
+   </widget>
+   <widget class="QWidget" name="pageFormations">
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>10</y>
-       <width>141</width>
+       <x>250</x>
+       <y>40</y>
+       <width>201</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Formation 2</string>
+      <string>Formation suivies</string>
      </property>
-    </widget>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>500</x>
-       <y>10</y>
-       <width>141</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Formation 3</string>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>50</y>
-       <width>41</width>
+       <y>130</y>
+       <width>171</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Nom</string>
+      <string>Nom de la formation</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>110</y>
+       <y>190</y>
        <width>181</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date obtention diplome</string>
+      <string>Obtention du diplôme</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>150</y>
+       <x>20</x>
+       <y>250</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -498,7 +727,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>180</y>
+       <y>310</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -510,8 +739,8 @@
     <widget class="QTextEdit" name="textEditNomDiplome">
      <property name="geometry">
       <rect>
-       <x>23</x>
-       <y>70</y>
+       <x>20</x>
+       <y>150</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -520,9 +749,9 @@
     <widget class="QTextEdit" name="textEditLieuDiplome">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>170</y>
-       <width>101</width>
+       <x>20</x>
+       <y>270</y>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -531,7 +760,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>210</y>
+       <y>330</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -540,9 +769,9 @@
     <widget class="QDateEdit" name="dateEditDiplome">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>130</y>
-       <width>110</width>
+       <x>20</x>
+       <y>210</y>
+       <width>191</width>
        <height>29</height>
       </rect>
      </property>
@@ -551,7 +780,7 @@
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>210</y>
+       <y>330</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -560,8 +789,8 @@
     <widget class="QTextEdit" name="textEditNomDiplome_2">
      <property name="geometry">
       <rect>
-       <x>253</x>
-       <y>70</y>
+       <x>250</x>
+       <y>150</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -571,20 +800,20 @@
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>110</y>
+       <y>190</y>
        <width>181</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date obtention diplome</string>
+      <string>Obtention du diplôme</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>180</y>
+       <y>310</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -596,9 +825,9 @@
     <widget class="QDateEdit" name="dateEditDiplome_2">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>130</y>
-       <width>110</width>
+       <x>250</x>
+       <y>210</y>
+       <width>191</width>
        <height>29</height>
       </rect>
      </property>
@@ -606,8 +835,8 @@
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>150</y>
+       <x>250</x>
+       <y>250</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -620,21 +849,21 @@
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>50</y>
-       <width>41</width>
+       <y>130</y>
+       <width>181</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Nom</string>
+      <string>Nom de la formation</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditLieuDiplome_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>170</y>
-       <width>101</width>
+       <x>250</x>
+       <y>270</y>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -643,7 +872,7 @@
      <property name="geometry">
       <rect>
        <x>480</x>
-       <y>210</y>
+       <y>330</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -652,8 +881,8 @@
     <widget class="QTextEdit" name="textEditNomDiplome_3">
      <property name="geometry">
       <rect>
-       <x>483</x>
-       <y>70</y>
+       <x>480</x>
+       <y>150</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -663,20 +892,20 @@
      <property name="geometry">
       <rect>
        <x>480</x>
-       <y>110</y>
+       <y>190</y>
        <width>181</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date obtention diplome</string>
+      <string>Obtention du diplôme</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
        <x>480</x>
-       <y>180</y>
+       <y>310</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -688,9 +917,9 @@
     <widget class="QDateEdit" name="dateEditDiplome_3">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>130</y>
-       <width>110</width>
+       <x>480</x>
+       <y>210</y>
+       <width>191</width>
        <height>29</height>
       </rect>
      </property>
@@ -698,8 +927,8 @@
     <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>610</x>
-       <y>150</y>
+       <x>480</x>
+       <y>250</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -712,21 +941,21 @@
      <property name="geometry">
       <rect>
        <x>480</x>
-       <y>50</y>
-       <width>41</width>
+       <y>130</y>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Nom</string>
+      <string>Nom de la formation</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditLieuDiplome_3">
      <property name="geometry">
       <rect>
-       <x>590</x>
-       <y>170</y>
-       <width>101</width>
+       <x>480</x>
+       <y>270</y>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -734,9 +963,9 @@
     <widget class="QPushButton" name="pushButton_8">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>250</y>
-       <width>83</width>
+       <x>290</x>
+       <y>440</y>
+       <width>121</width>
        <height>29</height>
       </rect>
      </property>
@@ -746,24 +975,11 @@
     </widget>
    </widget>
    <widget class="QWidget" name="pageExperiences">
-    <widget class="QLabel" name="label_24">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>20</y>
-       <width>141</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Expérience 1</string>
-     </property>
-    </widget>
     <widget class="QTextEdit" name="textEditDescExperience">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>230</y>
+       <y>360</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -772,8 +988,8 @@
     <widget class="QTextEdit" name="textEditNomExperience">
      <property name="geometry">
       <rect>
-       <x>33</x>
-       <y>90</y>
+       <x>30</x>
+       <y>120</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -782,21 +998,21 @@
     <widget class="QLabel" name="label_25">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>130</y>
+       <x>30</x>
+       <y>160</y>
        <width>111</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date debut exp </string>
+      <string>Date de début</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_26">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>200</y>
+       <y>340</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -809,7 +1025,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>150</y>
+       <y>180</y>
        <width>110</width>
        <height>29</height>
       </rect>
@@ -818,35 +1034,35 @@
     <widget class="QLabel" name="label_27">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>190</y>
-       <width>41</width>
+       <x>30</x>
+       <y>280</y>
+       <width>111</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Lieu</string>
+      <string>Entreprise</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_28">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>70</y>
-       <width>41</width>
+       <y>100</y>
+       <width>141</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Nom</string>
+      <string>Emploi</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditLieuExperience">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>190</y>
-       <width>101</width>
+       <x>30</x>
+       <y>300</y>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -854,8 +1070,8 @@
     <widget class="QDateEdit" name="dateEditExperienceEnd">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>150</y>
+       <x>30</x>
+       <y>240</y>
        <width>110</width>
        <height>29</height>
       </rect>
@@ -864,34 +1080,34 @@
     <widget class="QLabel" name="label_29">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>130</y>
+       <x>30</x>
+       <y>220</y>
        <width>111</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date fin exp </string>
+      <string>Date de fin</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_30">
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>70</y>
-       <width>41</width>
+       <y>100</y>
+       <width>131</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Nom</string>
+      <string>Emploi</string>
      </property>
     </widget>
     <widget class="QDateEdit" name="dateEditExperienceStart_2">
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>150</y>
+       <y>180</y>
        <width>110</width>
        <height>29</height>
       </rect>
@@ -901,7 +1117,7 @@
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>230</y>
+       <y>360</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -911,7 +1127,7 @@
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>200</y>
+       <y>340</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -923,35 +1139,35 @@
     <widget class="QLabel" name="label_32">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>130</y>
+       <x>270</x>
+       <y>220</y>
        <width>111</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date fin exp </string>
+      <string>Date de fin</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_33">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>190</y>
-       <width>41</width>
+       <x>270</x>
+       <y>280</y>
+       <width>101</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Lieu</string>
+      <string>Entreprise</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditLieuExperience_2">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>190</y>
-       <width>101</width>
+       <x>270</x>
+       <y>300</y>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -959,8 +1175,8 @@
     <widget class="QTextEdit" name="textEditNomExperience_2">
      <property name="geometry">
       <rect>
-       <x>273</x>
-       <y>90</y>
+       <x>270</x>
+       <y>120</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -969,8 +1185,8 @@
     <widget class="QDateEdit" name="dateEditExperienceEnd_2">
      <property name="geometry">
       <rect>
-       <x>390</x>
-       <y>150</y>
+       <x>270</x>
+       <y>240</y>
        <width>110</width>
        <height>29</height>
       </rect>
@@ -979,34 +1195,34 @@
     <widget class="QLabel" name="label_34">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>130</y>
+       <x>270</x>
+       <y>160</y>
        <width>111</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date debut exp </string>
+      <string>Date de début</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_35">
      <property name="geometry">
       <rect>
        <x>490</x>
-       <y>70</y>
-       <width>41</width>
+       <y>100</y>
+       <width>151</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Nom</string>
+      <string>Emploi</string>
      </property>
     </widget>
     <widget class="QDateEdit" name="dateEditExperienceStart_3">
      <property name="geometry">
       <rect>
        <x>490</x>
-       <y>150</y>
+       <y>180</y>
        <width>110</width>
        <height>29</height>
       </rect>
@@ -1016,7 +1232,7 @@
      <property name="geometry">
       <rect>
        <x>490</x>
-       <y>230</y>
+       <y>360</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -1026,7 +1242,7 @@
      <property name="geometry">
       <rect>
        <x>490</x>
-       <y>200</y>
+       <y>340</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -1038,35 +1254,35 @@
     <widget class="QLabel" name="label_37">
      <property name="geometry">
       <rect>
-       <x>600</x>
-       <y>130</y>
+       <x>490</x>
+       <y>220</y>
        <width>111</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date fin exp </string>
+      <string>Date de fin</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_38">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>190</y>
-       <width>41</width>
+       <x>490</x>
+       <y>280</y>
+       <width>121</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Lieu</string>
+      <string>Entreprise</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditLieuExperience_3">
      <property name="geometry">
       <rect>
-       <x>600</x>
-       <y>190</y>
-       <width>101</width>
+       <x>490</x>
+       <y>300</y>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -1074,8 +1290,8 @@
     <widget class="QTextEdit" name="textEditNomExperience_3">
      <property name="geometry">
       <rect>
-       <x>493</x>
-       <y>90</y>
+       <x>490</x>
+       <y>120</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -1084,9 +1300,9 @@
     <widget class="QDateEdit" name="dateEditExperienceEnd_3">
      <property name="geometry">
       <rect>
-       <x>610</x>
-       <y>150</y>
-       <width>81</width>
+       <x>490</x>
+       <y>240</y>
+       <width>111</width>
        <height>29</height>
       </rect>
      </property>
@@ -1094,48 +1310,38 @@
     <widget class="QLabel" name="label_39">
      <property name="geometry">
       <rect>
-       <x>480</x>
-       <y>130</y>
+       <x>490</x>
+       <y>160</y>
        <width>111</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Date debut exp </string>
+      <string>Date de début</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_40">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>20</y>
-       <width>141</width>
+       <x>230</x>
+       <y>40</y>
+       <width>261</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Expérience 2</string>
+      <string>Expériences professionnelles</string>
      </property>
-    </widget>
-    <widget class="QLabel" name="label_41">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>20</y>
-       <width>141</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Expérience 3</string>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_9">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>20</y>
-       <width>83</width>
+       <x>300</x>
+       <y>430</y>
+       <width>131</width>
        <height>29</height>
       </rect>
      </property>
@@ -1148,34 +1354,37 @@
     <widget class="QLabel" name="label_42">
      <property name="geometry">
       <rect>
-       <x>222</x>
+       <x>230</x>
        <y>20</y>
-       <width>201</width>
+       <width>271</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Informations personnelles (1/2)</string>
+      <string>Informations personnelles</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_43">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>90</y>
+       <x>180</x>
+       <y>70</y>
        <width>201</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Quel age avez vous ? </string>
+      <string>Quel âge avez vous ? </string>
      </property>
     </widget>
     <widget class="QLabel" name="label_44">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>140</y>
+       <x>180</x>
+       <y>160</y>
        <width>281</width>
        <height>20</height>
       </rect>
@@ -1187,21 +1396,21 @@
     <widget class="QLabel" name="label_45">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>190</y>
+       <x>180</x>
+       <y>250</y>
        <width>281</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Quel est votre mail ?</string>
+      <string>Quelle est votre adresse mail ?</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_46">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>240</y>
+       <x>180</x>
+       <y>340</y>
        <width>281</width>
        <height>20</height>
       </rect>
@@ -1213,11 +1422,17 @@
     <widget class="QCheckBox" name="checkBoxAge">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>90</y>
-       <width>451</width>
+       <x>180</x>
+       <y>120</y>
+       <width>341</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Cochez si vous ne souhaitez pas renseigner cette information</string>
@@ -1226,48 +1441,66 @@
     <widget class="QCheckBox" name="checkBoxPhoneNumber">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>130</y>
-       <width>121</width>
+       <x>180</x>
+       <y>210</y>
+       <width>361</width>
        <height>26</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Pareil</string>
+      <string>Cochez si vous ne souhaitez pas renseigner cette information</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBoxMail">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>180</y>
-       <width>121</width>
+       <x>180</x>
+       <y>300</y>
+       <width>381</width>
        <height>26</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Pareil</string>
+      <string>Cochez si vous ne souhaitez pas renseigner cette information</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBoxWebsite">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>230</y>
-       <width>121</width>
+       <x>180</x>
+       <y>390</y>
+       <width>361</width>
        <height>26</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Pareil</string>
+      <string>Cochez si vous ne souhaitez pas renseigner cette information</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditAge">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>180</x>
        <y>90</y>
-       <width>61</width>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -1278,9 +1511,9 @@
     <widget class="QTextEdit" name="textEditPhoneNumber">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>130</y>
-       <width>221</width>
+       <x>180</x>
+       <y>180</y>
+       <width>361</width>
        <height>31</height>
       </rect>
      </property>
@@ -1288,9 +1521,9 @@
     <widget class="QTextEdit" name="textEditMail">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>180</y>
-       <width>221</width>
+       <x>180</x>
+       <y>270</y>
+       <width>361</width>
        <height>31</height>
       </rect>
      </property>
@@ -1298,8 +1531,8 @@
     <widget class="QTextEdit" name="textEditWebsite">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>230</y>
+       <x>180</x>
+       <y>360</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -1308,8 +1541,8 @@
     <widget class="QPushButton" name="pushButton_10">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>20</y>
+       <x>320</x>
+       <y>440</y>
        <width>83</width>
        <height>29</height>
       </rect>
@@ -1323,100 +1556,103 @@
     <widget class="QLabel" name="label_47">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>10</y>
-       <width>101</width>
+       <x>280</x>
+       <y>30</y>
+       <width>151</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Compétences</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLabel" name="label_48">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>70</y>
-       <width>101</width>
+       <x>40</x>
+       <y>100</y>
+       <width>201</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Compétence 1</string>
+      <string>Nom de la compétence</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_49">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>110</y>
-       <width>101</width>
+       <x>40</x>
+       <y>210</y>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Compétence 2</string>
+      <string>Nom de la compétence</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_50">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>150</y>
-       <width>101</width>
+       <x>40</x>
+       <y>320</y>
+       <width>221</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Compétence 3</string>
+      <string>Nom de la compétence</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_51">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>190</y>
-       <width>101</width>
+       <x>370</x>
+       <y>100</y>
+       <width>181</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Compétence 4</string>
+      <string>Nom de la compétence</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_52">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>230</y>
-       <width>101</width>
+       <x>370</x>
+       <y>210</y>
+       <width>201</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Compétence 5</string>
+      <string>Nom de la compétence</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_53">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>260</y>
-       <width>101</width>
+       <x>370</x>
+       <y>320</y>
+       <width>221</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Compétence 6</string>
+      <string>Nom de la compétence</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEditCompetence">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>70</y>
-       <width>104</width>
+       <x>40</x>
+       <y>120</y>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -1424,9 +1660,9 @@
     <widget class="QSpinBox" name="spinBoxCompetence">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>70</y>
-       <width>48</width>
+       <x>250</x>
+       <y>120</y>
+       <width>71</width>
        <height>29</height>
       </rect>
      </property>
@@ -1440,11 +1676,17 @@
     <widget class="QCheckBox" name="checkBoxCompetence">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>70</y>
+       <x>40</x>
+       <y>150</y>
        <width>301</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Je ne veux pas cette compétence</string>
@@ -1453,11 +1695,17 @@
     <widget class="QCheckBox" name="checkBoxCompetence_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>110</y>
+       <x>40</x>
+       <y>260</y>
        <width>301</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Je ne veux pas cette compétence</string>
@@ -1466,9 +1714,9 @@
     <widget class="QSpinBox" name="spinBoxCompetence_2">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>110</y>
-       <width>48</width>
+       <x>250</x>
+       <y>230</y>
+       <width>71</width>
        <height>29</height>
       </rect>
      </property>
@@ -1482,9 +1730,9 @@
     <widget class="QTextEdit" name="textEditCompetence_2">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>110</y>
-       <width>104</width>
+       <x>40</x>
+       <y>230</y>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -1492,11 +1740,17 @@
     <widget class="QCheckBox" name="checkBoxCompetence_3">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>140</y>
+       <x>40</x>
+       <y>370</y>
        <width>301</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Je ne veux pas cette compétence</string>
@@ -1505,9 +1759,9 @@
     <widget class="QSpinBox" name="spinBoxCompetence_3">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>140</y>
-       <width>48</width>
+       <x>250</x>
+       <y>340</y>
+       <width>71</width>
        <height>29</height>
       </rect>
      </property>
@@ -1521,9 +1775,9 @@
     <widget class="QTextEdit" name="textEditCompetence_3">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>140</y>
-       <width>104</width>
+       <x>40</x>
+       <y>340</y>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -1531,11 +1785,17 @@
     <widget class="QCheckBox" name="checkBoxCompetence_4">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>190</y>
+       <x>370</x>
+       <y>150</y>
        <width>301</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Je ne veux pas cette compétence</string>
@@ -1544,9 +1804,9 @@
     <widget class="QSpinBox" name="spinBoxCompetence_4">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>190</y>
-       <width>48</width>
+       <x>580</x>
+       <y>120</y>
+       <width>71</width>
        <height>29</height>
       </rect>
      </property>
@@ -1560,9 +1820,9 @@
     <widget class="QTextEdit" name="textEditCompetence_4">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>190</y>
-       <width>104</width>
+       <x>370</x>
+       <y>120</y>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -1570,11 +1830,17 @@
     <widget class="QCheckBox" name="checkBoxCompetence_5">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>220</y>
+       <x>370</x>
+       <y>260</y>
        <width>301</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Je ne veux pas cette compétence</string>
@@ -1583,9 +1849,9 @@
     <widget class="QSpinBox" name="spinBoxCompetence_5">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>220</y>
-       <width>48</width>
+       <x>580</x>
+       <y>230</y>
+       <width>71</width>
        <height>29</height>
       </rect>
      </property>
@@ -1599,9 +1865,9 @@
     <widget class="QTextEdit" name="textEditCompetence_5">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>220</y>
-       <width>104</width>
+       <x>370</x>
+       <y>230</y>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -1609,11 +1875,17 @@
     <widget class="QCheckBox" name="checkBoxCompetence_6">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>250</y>
+       <x>370</x>
+       <y>370</y>
        <width>301</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Je ne veux pas cette compétence</string>
@@ -1622,9 +1894,9 @@
     <widget class="QSpinBox" name="spinBoxCompetence_6">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>250</y>
-       <width>48</width>
+       <x>580</x>
+       <y>340</y>
+       <width>71</width>
        <height>29</height>
       </rect>
      </property>
@@ -1638,9 +1910,9 @@
     <widget class="QTextEdit" name="textEditCompetence_6">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>250</y>
-       <width>104</width>
+       <x>370</x>
+       <y>340</y>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -1648,9 +1920,9 @@
     <widget class="QPushButton" name="pushButton_11">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>30</y>
-       <width>83</width>
+       <x>310</x>
+       <y>440</y>
+       <width>101</width>
        <height>29</height>
       </rect>
      </property>
@@ -1658,39 +1930,126 @@
       <string>Continuer</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_62">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>100</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Niveau</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_63">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>210</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Niveau</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_64">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>320</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Niveau</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_65">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>100</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Niveau</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_66">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>210</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Niveau</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_67">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>320</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Niveau</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="pageActivity">
     <widget class="QLabel" name="label_54">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>20</y>
-       <width>63</width>
+       <x>280</x>
+       <y>30</y>
+       <width>171</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Activités</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QCheckBox" name="checkBoxActivite">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>70</y>
+       <x>220</x>
+       <y>160</y>
        <width>301</width>
        <height>26</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Je ne veux pas cette compétence</string>
+      <string>Je ne veux pas cette activité</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_55">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>70</y>
+       <x>220</x>
+       <y>110</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -1702,9 +2061,9 @@
     <widget class="QTextEdit" name="textEditActivite">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>70</y>
-       <width>104</width>
+       <x>220</x>
+       <y>130</y>
+       <width>261</width>
        <height>31</height>
       </rect>
      </property>
@@ -1712,21 +2071,27 @@
     <widget class="QCheckBox" name="checkBoxActivite_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>140</y>
-       <width>301</width>
+       <x>220</x>
+       <y>260</y>
+       <width>221</width>
        <height>26</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Je ne veux pas cette compétence</string>
+      <string>Je ne veux pas cette activité</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_56">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>140</y>
+       <x>220</x>
+       <y>210</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -1738,9 +2103,9 @@
     <widget class="QTextEdit" name="textEditActivite_2">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>140</y>
-       <width>104</width>
+       <x>220</x>
+       <y>230</y>
+       <width>261</width>
        <height>31</height>
       </rect>
      </property>
@@ -1748,21 +2113,27 @@
     <widget class="QCheckBox" name="checkBoxActivite_3">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>210</y>
+       <x>220</x>
+       <y>360</y>
        <width>301</width>
        <height>26</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Je ne veux pas cette compétence</string>
+      <string>Je ne veux pas cette activité</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_57">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>210</y>
+       <x>220</x>
+       <y>310</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -1774,9 +2145,9 @@
     <widget class="QTextEdit" name="textEditActivite_3">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>210</y>
-       <width>104</width>
+       <x>220</x>
+       <y>330</y>
+       <width>261</width>
        <height>31</height>
       </rect>
      </property>
@@ -1784,8 +2155,8 @@
     <widget class="QPushButton" name="pushButton_12">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>30</y>
+       <x>320</x>
+       <y>440</y>
        <width>83</width>
        <height>29</height>
       </rect>
@@ -1795,59 +2166,62 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="pageTemplate"/>
-  </widget>
-  <widget class="QPushButton" name="pushButton_5">
-   <property name="geometry">
-    <rect>
-     <x>72</x>
-     <y>430</y>
-     <width>191</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Insérer une photo</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelPhoto">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>50</y>
-     <width>141</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Photo choisie </string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pdfButton">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>420</y>
-     <width>339</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Créer le pdf</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_13">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>500</y>
-     <width>201</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>position console</string>
-   </property>
+   <widget class="QWidget" name="pageTemplate">
+    <widget class="QPushButton" name="pushButton_13">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>410</y>
+       <width>201</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Continuer</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pagePrint">
+    <widget class="QPushButton" name="pdfButton">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>310</y>
+       <width>339</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Créer le pdf</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>130</y>
+       <width>521</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Merci d'avoir répondu à nos questions.
+ Votre CV est désormais prêt.
+ Vous pouvez l'imprimer !</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>

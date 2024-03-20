@@ -5,7 +5,6 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QPainter>
-#include <string>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QColorDialog>
@@ -16,6 +15,427 @@ CvEditor::CvEditor(QWidget *parent)
     , ui(new Ui::CvEditor)
 {
     ui->setupUi(this);
+
+    // Style de la page d'introduction
+
+    // Style pour le fond de la fenêtre
+    this->setStyleSheet("background-color: #10002b; color: #FEFEFE;");
+
+    // Style pour le fond des pages du stacked widget
+    ui->stackedWidget->setStyleSheet("background-color: #10002b; color: #FEFEFE; font-family:'Poppins', sans-serif;");
+
+    // Style pour le texte d'introduction
+    ui->label->setStyleSheet("color: #FEFEFE; font-size: 18px;");
+
+    // Style pour le bouton "Continuer"
+    ui->pushButton->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+    // Page choix des couleurs :
+
+    // Style pour le texte d'introduction de la deuxième page
+    ui->label_2->setStyleSheet("color: #FEFEFE; font-size: 18px;");
+
+    // Style pour les boutons de choix de couleur
+    QStringList buttonNames = {"buttonChoiceColor", "buttonChoiceColorName", "buttonChoiceColorJob", "buttonChoiceColorInfos", "buttonChoiceFont"};
+    for (const auto& buttonName : buttonNames) {
+        QPushButton *button = findChild<QPushButton*>(buttonName);
+        if (button)
+            button->setStyleSheet(
+                "QPushButton {"
+                "   background-color: #7b2cbf;"
+                "   border: 1px solid #7b2cbf;"
+                "   color: #FEFEFE;"
+                "   border-radius: 5px;"
+                "}"
+                "QPushButton:hover {"
+                "   background-color: #9d4edd;"
+                "}"
+                );
+    }
+
+    ui->pushButton_2->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+    ui->pushButton_3->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+    ui->label_58->setStyleSheet("color: #FEFEFE; font-size: 18px;");
+
+    // Style pour la troisième page
+    ui->label_4->setStyleSheet("color: #FEFEFE; font-size: 18px;");
+    ui->label_5->setStyleSheet("color: #FEFEFE;");
+    ui->label_6->setStyleSheet("color: #FEFEFE;");
+
+    // Style pour les champs de texte
+    QStringList textEditNames = {"nameText", "surnameText"};
+    for (const auto& textEditName : textEditNames) {
+        QTextEdit *textEdit = findChild<QTextEdit*>(textEditName);
+        if (textEdit)
+            textEdit->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    }
+
+    // Style pour le bouton "Continuer"
+    ui->pushButton_4->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+    // Style pour la page relative à la photo
+    ui->label_59->setStyleSheet("color: #FEFEFE; font-size: 18px;");
+    ui->labelPhoto->setStyleSheet("color: #FEFEFE; font-size: 16px;");
+    ui->pushButton_5->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+    ui->pushButton_14->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+    // Style pour la page relative au métier recherché
+    ui->label_7->setStyleSheet("color: #FEFEFE;");
+    ui->jobEdit->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->pushButton_6->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+    ui->label_60->setStyleSheet("color: #FEFEFE; font-size: 16px;");
+
+    // Style pour la page de description
+    ui->label_8->setStyleSheet("color: #FEFEFE;");
+    ui->textEditDesc->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->pushButton_7->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+    ui->label_61->setStyleSheet("color: #FEFEFE; font-size: 16px;");
+
+    // Style pour la page de formations
+    ui->label_10->setStyleSheet("color: #FEFEFE; font-size: 16px;");
+    ui->label_12->setStyleSheet("color: #FEFEFE;");
+    ui->label_13->setStyleSheet("color: #FEFEFE;");
+    ui->label_14->setStyleSheet("color: #FEFEFE;");
+    ui->label_15->setStyleSheet("color: #FEFEFE;");
+    ui->label_16->setStyleSheet("color: #FEFEFE;");
+    ui->label_17->setStyleSheet("color: #FEFEFE;");
+    ui->label_18->setStyleSheet("color: #FEFEFE;");
+    ui->label_19->setStyleSheet("color: #FEFEFE;");
+    ui->label_20->setStyleSheet("color: #FEFEFE;");
+    ui->label_21->setStyleSheet("color: #FEFEFE;");
+    ui->label_22->setStyleSheet("color: #FEFEFE;");
+    ui->label_23->setStyleSheet("color: #FEFEFE;");
+
+    ui->textEditNomDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditLieuDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditDescDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditNomDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditLieuDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditDescDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditNomDiplome_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditLieuDiplome_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditDescDiplome_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditDiplome_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+
+    ui->pushButton_8->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+
+    // Style pour la page des expériences
+    ui->label_25->setStyleSheet("color: #FEFEFE;");
+    ui->label_26->setStyleSheet("color: #FEFEFE;");
+    ui->label_27->setStyleSheet("color: #FEFEFE;");
+    ui->label_28->setStyleSheet("color: #FEFEFE;");
+    ui->label_29->setStyleSheet("color: #FEFEFE;");
+    ui->label_30->setStyleSheet("color: #FEFEFE;");
+    ui->label_31->setStyleSheet("color: #FEFEFE;");
+    ui->label_32->setStyleSheet("color: #FEFEFE;");
+    ui->label_33->setStyleSheet("color: #FEFEFE;");
+    ui->label_34->setStyleSheet("color: #FEFEFE;");
+    ui->label_35->setStyleSheet("color: #FEFEFE;");
+    ui->label_36->setStyleSheet("color: #FEFEFE;");
+    ui->label_37->setStyleSheet("color: #FEFEFE;");
+    ui->label_38->setStyleSheet("color: #FEFEFE;");
+    ui->label_39->setStyleSheet("color: #FEFEFE;");
+    ui->label_40->setStyleSheet("color: #FEFEFE; font-size: 16px;");
+
+    ui->textEditDescExperience->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditNomExperience->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditLieuExperience->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditExperienceStart->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditExperienceEnd->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditNomExperience_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditLieuExperience_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditDescExperience_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditExperienceStart_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditExperienceEnd_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditNomExperience_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditLieuExperience_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditDescExperience_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditExperienceStart_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->dateEditExperienceEnd_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+
+    ui->pushButton_9->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+
+    // Style pour la page des informations personnelles
+    ui->label_42->setStyleSheet("color: #FEFEFE; font-size: 16px;");
+    ui->label_43->setStyleSheet("color: #FEFEFE;");
+    ui->label_44->setStyleSheet("color: #FEFEFE;");
+    ui->label_45->setStyleSheet("color: #FEFEFE;");
+    ui->label_46->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxAge->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxPhoneNumber->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxMail->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxWebsite->setStyleSheet("color: #FEFEFE;");
+    ui->textEditAge->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditPhoneNumber->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditMail->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditWebsite->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->pushButton_10->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+    // Style pour la page des compétences
+    ui->label_47->setStyleSheet(
+        "QLabel {"
+        "   color: #333333;"
+        "   font-size: 20px;"
+        "   font-weight: bold;"
+        "}"
+        );
+    ui->label_48->setStyleSheet("QLabel { color: #333333; }");
+    ui->label_49->setStyleSheet("QLabel { color: #333333; }");
+    ui->label_50->setStyleSheet("QLabel { color: #333333; }");
+    ui->label_51->setStyleSheet("QLabel { color: #333333; }");
+    ui->label_52->setStyleSheet("QLabel { color: #333333; }");
+    ui->label_53->setStyleSheet("QLabel { color: #333333; }");
+    ui->textEditCompetence->setStyleSheet(
+        "QTextEdit {"
+        "   color: #333333;"
+        "   background-color: #F5F5F5;"
+        "   border: 1px solid #BDBDBD;"
+        "}"
+        );
+    ui->textEditCompetence_2->setStyleSheet(
+        "QTextEdit {"
+        "   color: #333333;"
+        "   background-color: #F5F5F5;"
+        "   border: 1px solid #BDBDBD;"
+        "}"
+        );
+    ui->textEditCompetence_3->setStyleSheet(
+        "QTextEdit {"
+        "   color: #333333;"
+        "   background-color: #F5F5F5;"
+        "   border: 1px solid #BDBDBD;"
+        "}"
+        );
+    ui->textEditCompetence_4->setStyleSheet(
+        "QTextEdit {"
+        "   color: #333333;"
+        "   background-color: #F5F5F5;"
+        "   border: 1px solid #BDBDBD;"
+        "}"
+        );
+    ui->textEditCompetence_5->setStyleSheet(
+        "QTextEdit {"
+        "   color: #333333;"
+        "   background-color: #F5F5F5;"
+        "   border: 1px solid #BDBDBD;"
+        "}"
+        );
+    ui->textEditCompetence_6->setStyleSheet(
+        "QTextEdit {"
+        "   color: #333333;"
+        "   background-color: #F5F5F5;"
+        "   border: 1px solid #BDBDBD;"
+        "}"
+        );
+    ui->spinBoxCompetence->setStyleSheet("QSpinBox { color: #333333; }");
+    ui->spinBoxCompetence_2->setStyleSheet("QSpinBox { color: #333333; }");
+    ui->spinBoxCompetence_3->setStyleSheet("QSpinBox { color: #333333; }");
+    ui->spinBoxCompetence_4->setStyleSheet("QSpinBox { color: #333333; }");
+    ui->spinBoxCompetence_5->setStyleSheet("QSpinBox { color: #333333; }");
+    ui->spinBoxCompetence_6->setStyleSheet("QSpinBox { color: #333333; }");
+    ui->checkBoxCompetence->setStyleSheet("QCheckBox { color: #333333; }");
+    ui->checkBoxCompetence_2->setStyleSheet("QCheckBox { color: #333333; }");
+    ui->checkBoxCompetence_3->setStyleSheet("QCheckBox { color: #333333; }");
+    ui->checkBoxCompetence_4->setStyleSheet("QCheckBox { color: #333333; }");
+    ui->checkBoxCompetence_5->setStyleSheet("QCheckBox { color: #333333; }");
+    ui->checkBoxCompetence_6->setStyleSheet("QCheckBox { color: #333333; }");
+    ui->pushButton_11->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+    ui->label_62->setStyleSheet("QLabel { color: #FEFEFE; }");
+    ui->label_63->setStyleSheet("QLabel { color: #FEFEFE; }");
+    ui->label_64->setStyleSheet("QLabel { color: #FEFEFE; }");
+    ui->label_65->setStyleSheet("QLabel { color: #FEFEFE; }");
+    ui->label_66->setStyleSheet("QLabel { color: #FEFEFE; }");
+    ui->label_67->setStyleSheet("QLabel { color: #FEFEFE; }");
+
+    // Style pour la page des compétences
+    ui->label_47->setStyleSheet("color: #FEFEFE; font-size: 16px;"); // Titre centré
+    ui->label_48->setStyleSheet("color: #FEFEFE;");
+    ui->label_49->setStyleSheet("color: #FEFEFE;");
+    ui->label_50->setStyleSheet("color: #FEFEFE;");
+    ui->label_51->setStyleSheet("color: #FEFEFE;");
+    ui->label_52->setStyleSheet("color: #FEFEFE;");
+    ui->label_53->setStyleSheet("color: #FEFEFE;");
+    ui->textEditCompetence->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditCompetence_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditCompetence_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditCompetence_4->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditCompetence_5->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditCompetence_6->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->spinBoxCompetence->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->spinBoxCompetence_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->spinBoxCompetence_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->spinBoxCompetence_4->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->spinBoxCompetence_5->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->spinBoxCompetence_6->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->checkBoxCompetence->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxCompetence_2->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxCompetence_3->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxCompetence_4->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxCompetence_5->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxCompetence_6->setStyleSheet("color: #FEFEFE;");
+    ui->pushButton_11->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+    // Style pour la page des activités
+    ui->label_54->setStyleSheet("color: #FEFEFE; font-size: 16px;"); // Titre centré
+    ui->label_55->setStyleSheet("color: #FEFEFE;");
+    ui->label_56->setStyleSheet("color: #FEFEFE;");
+    ui->label_57->setStyleSheet("color: #FEFEFE;");
+    ui->textEditActivite->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditActivite_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->textEditActivite_3->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
+    ui->checkBoxActivite->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxActivite_2->setStyleSheet("color: #FEFEFE;");
+    ui->checkBoxActivite_3->setStyleSheet("color: #FEFEFE;");
+    ui->pushButton_12->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #5a189a;"
+        "   border: 1px solid #FEFEFE;"
+        "   color: #FEFEFE;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #7b2cbf;"
+        "}"
+        );
+
+
+
     m_layout = new QGridLayout;
 
     // Création des objets DragDropLabel
@@ -47,24 +467,43 @@ CvEditor::CvEditor(QWidget *parent)
     m_dragdroplabelresult6->setPixmap(QPixmap("C:/Users/gerov/Pictures/QtPictures/image_jobdocs_empty.jpg"));
 
 
-    m_layout->addWidget(m_dragdroplabel1,0,0);
-    m_layout->addWidget(m_dragdroplabel2,1,0);
-    m_layout->addWidget(m_dragdroplabel3,2,0);
-    m_layout->addWidget(m_dragdroplabel4,3,0);
-    m_layout->addWidget(m_dragdroplabel5,4,0);
-    m_layout->addWidget(m_dragdroplabel6,5,0);
-    m_layout->addWidget(m_dragdroplabelresult1,1,1);
-    m_layout->addWidget(m_dragdroplabelresult2,1,2);
-    m_layout->addWidget(m_dragdroplabelresult3,2,1);
-    m_layout->addWidget(m_dragdroplabelresult4,2,2);
-    m_layout->addWidget(m_dragdroplabelresult5,3,1);
-    m_layout->addWidget(m_dragdroplabelresult6,3,2);
+    // Création des layouts pour les zones gauche et droite
+    QHBoxLayout *mainLayout = new QHBoxLayout;
+    QVBoxLayout *leftLayout = new QVBoxLayout;
+    QGridLayout *rightLayout = new QGridLayout;
 
+    // Ajout des DragDropLabel à la zone gauche
+    leftLayout->addWidget(m_dragdroplabel1);
+    leftLayout->addWidget(m_dragdroplabel2);
+    leftLayout->addWidget(m_dragdroplabel3);
+    leftLayout->addWidget(m_dragdroplabel4);
+    leftLayout->addWidget(m_dragdroplabel5);
+    leftLayout->addWidget(m_dragdroplabel6);
+
+    // Ajout des DragDropLabelResult à la zone droite
+    rightLayout->addWidget(m_dragdroplabelresult1, 0, 0);
+    rightLayout->addWidget(m_dragdroplabelresult2, 0, 1);
+    rightLayout->addWidget(m_dragdroplabelresult3, 1, 0);
+    rightLayout->addWidget(m_dragdroplabelresult4, 1, 1);
+    rightLayout->addWidget(m_dragdroplabelresult5, 2, 0);
+    rightLayout->addWidget(m_dragdroplabelresult6, 2, 1);
+
+    // Ajout des espacements entre les éléments
+    leftLayout->addStretch(1);
+    rightLayout->setRowStretch(3, 1); // Espacement pour la troisième ligne
+
+    // Ajout des layouts gauche et droite au layout principal
+    mainLayout->addLayout(leftLayout);
+    mainLayout->addLayout(rightLayout);
+
+    // Configuration du layout de la page
     int pageIndex = ui->stackedWidget->indexOf(ui->pageTemplate);
     if (pageIndex != -1) {
         QWidget *page = ui->stackedWidget->widget(pageIndex);
-        page->setLayout(m_layout);
+        page->setLayout(mainLayout);
     }
+
+
 
     // les images de base
 
@@ -387,9 +826,9 @@ void CvEditor::on_pdfButton_clicked()
 
     if (!photo.isNull()) {
         // Définir la position et la taille de l'image dans le PDF
-        int photoWidth = photo.width();
-        int photoHeight = photo.height();
-        int photoX = 50; // Position X où placer la photo
+        int photoWidth = 200;
+        int photoHeight = 200;
+        int photoX = 75; // Position X où placer la photo
         int photoY = 50; // Position Y où placer la photo
 
         // Dessiner l'image dans le fichier PDF
@@ -786,7 +1225,7 @@ void CvEditor::on_buttonChoiceFont_clicked()
 
 void CvEditor::on_pushButton_4_clicked()
 {
-    ui->stackedWidget->setCurrentWidget(ui->page_7);
+    ui->stackedWidget->setCurrentWidget(ui->pagePhoto);
 }
 
 
@@ -1000,7 +1439,14 @@ void CvEditor::on_pushButton_13_clicked()
             << "Loisir EST EN POSITION " << positionLoisir
         ;
 
+    ui->stackedWidget->setCurrentWidget(ui->pagePrint);
 
 
+}
+
+
+void CvEditor::on_pushButton_14_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_7);
 }
 
