@@ -622,28 +622,28 @@ void CvEditor::on_pdfButton_clicked()
     // Calcul des positions
     switch (positionDescription) {
     case 1:
-        positionDescX = 90;
-        positionDescY = 350;
+        positionDescX = 130;
+        positionDescY = 370;
         break;
     case 2:
-        positionDescX = 630;
+        positionDescX = 580;
         positionDescY = 370;
         break;
     case 3:
         positionDescX = 130;
-        positionDescY = 650;
+        positionDescY = 750;
         break;
     case 4:
-        positionDescX = 630;
-        positionDescY = 670;
+        positionDescX = 580;
+        positionDescY = 750;
         break;
     case 5:
         positionDescX = 130;
-        positionDescY = 1000;
+        positionDescY = 1130;
         break;
     case 6:
-        positionDescX = 630;
-        positionDescY = 1000;
+        positionDescX = 580;
+        positionDescY = 1130;
         break;
     default:
         positionDescX = 9999;
@@ -653,28 +653,28 @@ void CvEditor::on_pdfButton_clicked()
 
     switch (positionFormation) {
     case 1:
-        positionFormationX = 90;
-        positionFormationY = 350;
+        positionFormationX = 130;
+        positionFormationY = 370;
         break;
     case 2:
-        positionFormationX = 630;
+        positionFormationX = 580;
         positionFormationY = 370;
         break;
     case 3:
         positionFormationX = 130;
-        positionFormationY = 650;
+        positionFormationY = 750;
         break;
     case 4:
-        positionFormationX = 630;
-        positionFormationY = 670;
+        positionFormationX = 580;
+        positionFormationY = 750;
         break;
     case 5:
         positionFormationX = 130;
-        positionFormationY = 1000;
+        positionFormationY = 1130;
         break;
     case 6:
-        positionFormationX = 630;
-        positionFormationY = 1000;
+        positionFormationX = 580;
+        positionFormationY = 1130;
         break;
     default:
         positionFormationX = 9999;
@@ -684,28 +684,28 @@ void CvEditor::on_pdfButton_clicked()
 
     switch (positionExperience) {
     case 1:
-        positionExperienceX = 90;
-        positionExperienceY = 350;
+        positionExperienceX = 130;
+        positionExperienceY = 370;
         break;
     case 2:
-        positionExperienceX = 630;
+        positionExperienceX = 580;
         positionExperienceY = 370;
         break;
     case 3:
         positionExperienceX = 130;
-        positionExperienceY = 650;
+        positionExperienceY = 750;
         break;
     case 4:
-        positionExperienceX = 630;
-        positionExperienceY = 670;
+        positionExperienceX = 580;
+        positionExperienceY = 750;
         break;
     case 5:
         positionExperienceX = 130;
-        positionExperienceY = 1000;
+        positionExperienceY = 1130;
         break;
     case 6:
-        positionExperienceX = 630;
-        positionExperienceY = 1000;
+        positionExperienceX = 580;
+        positionExperienceY = 1130;
         break;
     default:
         positionExperienceX = 9999;
@@ -715,28 +715,28 @@ void CvEditor::on_pdfButton_clicked()
 
     switch (positionInfoPerso) {
     case 1:
-        positionInfoPersoX = 90;
-        positionInfoPersoY = 350;
+        positionInfoPersoX = 130;
+        positionInfoPersoY = 370;
         break;
     case 2:
-        positionInfoPersoX = 630;
+        positionInfoPersoX = 580;
         positionInfoPersoY = 370;
         break;
     case 3:
         positionInfoPersoX = 130;
-        positionInfoPersoY = 650;
+        positionInfoPersoY = 750;
         break;
     case 4:
-        positionInfoPersoX = 630;
-        positionInfoPersoY = 670;
+        positionInfoPersoX = 580;
+        positionInfoPersoY = 750;
         break;
     case 5:
         positionInfoPersoX = 130;
-        positionInfoPersoY = 1000;
+        positionInfoPersoY = 1130;
         break;
     case 6:
-        positionInfoPersoX = 630;
-        positionInfoPersoY = 1000;
+        positionInfoPersoX = 580;
+        positionInfoPersoY = 1130;
         break;
     default:
         positionInfoPersoX = 9999;
@@ -746,28 +746,28 @@ void CvEditor::on_pdfButton_clicked()
 
     switch (positionCompetence) {
     case 1:
-        positionCompetenceX = 90;
-        positionCompetenceY = 350;
+        positionCompetenceX = 130;
+        positionCompetenceY = 370;
         break;
     case 2:
-        positionCompetenceX = 630;
+        positionCompetenceX = 580;
         positionCompetenceY = 370;
         break;
     case 3:
         positionCompetenceX = 130;
-        positionCompetenceY = 650;
+        positionCompetenceY = 750;
         break;
     case 4:
-        positionCompetenceX = 630;
-        positionCompetenceY = 670;
+        positionCompetenceX = 580;
+        positionCompetenceY = 750;
         break;
     case 5:
         positionCompetenceX = 130;
-        positionCompetenceY = 1000;
+        positionCompetenceY = 1130;
         break;
     case 6:
-        positionCompetenceX = 630;
-        positionCompetenceY = 1000;
+        positionCompetenceX = 580;
+        positionCompetenceY = 1130;
         break;
     default:
         positionCompetenceX = 9999;
@@ -777,28 +777,28 @@ void CvEditor::on_pdfButton_clicked()
 
     switch (positionLoisir) {
     case 1:
-        positionLoisirX = 90;
-        positionLoisirY = 350;
+        positionLoisirX = 130;
+        positionLoisirY = 370;
         break;
     case 2:
-        positionLoisirX = 630;
+        positionLoisirX = 580;
         positionLoisirY = 370;
         break;
     case 3:
         positionLoisirX = 130;
-        positionLoisirY = 650;
+        positionLoisirY = 750;
         break;
     case 4:
-        positionLoisirX = 630;
-        positionLoisirY = 670;
+        positionLoisirX = 580;
+        positionLoisirY = 750;
         break;
     case 5:
         positionLoisirX = 130;
-        positionLoisirY = 1000;
+        positionLoisirY = 1130;
         break;
     case 6:
-        positionLoisirX = 630;
-        positionLoisirY = 1000;
+        positionLoisirX = 580;
+        positionLoisirY = 1130;
         break;
     default:
         positionLoisirX = 9999;
@@ -810,6 +810,7 @@ void CvEditor::on_pdfButton_clicked()
 
     // Rectangle en fond
     painter.setBrush(primaryColorCV);
+    painter.setPen(primaryColorCV);
     painter.drawRect(5, 0, 950, 300);
 
     // Création du texte prenom nom
@@ -818,7 +819,7 @@ void CvEditor::on_pdfButton_clicked()
     painter.setFont(fontName);
 
     painter.setPen(textColorName);
-    painter.drawText(200, 150, ui->nameText->toPlainText() + " " + ui->surnameText->toPlainText());
+    painter.drawText(300, 150, ui->nameText->toPlainText() + " " + ui->surnameText->toPlainText());
 
 
     // Ajout de la photo téléchargée par l'utilisateur
@@ -839,29 +840,37 @@ void CvEditor::on_pdfButton_clicked()
     QFont fontJob (textFont, 20);
     painter.setFont(fontJob);
     painter.setPen(textColorJob);
-    painter.drawText(200, 200, ui->jobEdit->toPlainText());
+    painter.drawText(300, 200, ui->jobEdit->toPlainText());
 
 
+    painter.setPen(primaryColorCV);
     painter.drawLine(100,300, 100, 1500);
-    painter.drawLine(600,300, 600, 1500);
+    painter.drawLine(550,300, 550, 1500);
 
-
+    painter.setBrush(primaryColorCV);
     // Partie description de la personne
     painter.drawEllipse(90, 350, 20, 20);
 
-    int maxWidthDesc = 450;
+    int maxWidthDesc = 400;
 
+    painter.setPen(textColorInfos);
+    QFont fontSubTitle (textFont, 14);
     QFont fontDesc (textFont, 12);
+    fontSubTitle.setCapitalization(QFont::AllUppercase);;
+
+    painter.setFont(fontSubTitle);
+
+    painter.drawText(positionDescX, positionDescY, "Description");
     painter.setFont(fontDesc);
     painter.setPen(textColorInfos);
-    QRect textRect(positionDescX, positionDescY, maxWidthDesc, 200);
+    QRect textRect(positionDescX, positionDescY + 10, maxWidthDesc, 200);
     painter.drawText(textRect, Qt::TextWordWrap, ui->textEditDesc->toPlainText());
 
 
     // partie formation
-    painter.drawEllipse(90, 630, 20, 20);
-    QFont fontSubTitle (textFont, 14);
-    fontSubTitle.setCapitalization(QFont::AllUppercase);;
+    painter.setPen(primaryColorCV);
+    painter.drawEllipse(90, 730, 20, 20);
+    painter.setPen(textColorInfos);
     painter.setFont(fontSubTitle);
     painter.drawText(positionFormationX, positionFormationY, "Formations");
 
@@ -885,23 +894,29 @@ void CvEditor::on_pdfButton_clicked()
 
     // Créer une QStringList pour stocker les informations sur les formations
     QStringList formations;
-    formations << formationA << formationB << formationC;
+    formations << formationA << formationB;
 
     // Position intiale des foramtions
     int yInitPosForm = positionFormationY + 50;
+    int yInitPosLineForm = yInitPosForm + 25;
     QFont fontSubTitleList (textFont, 12);
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &formation, formations) {
         QStringList lines = formation.split("\n");
         foreach (const QString &line, lines) {
-            painter.drawText(positionFormationX, yInitPosForm, line);
-            yInitPosForm += 25;
+            painter.drawText(positionFormationX, yInitPosLineForm, line);
+            yInitPosLineForm += 25;
         }
+        yInitPosForm = yInitPosForm + yInitPosLineForm + 100;
+
     }
 
     // partie expériences
-    painter.drawEllipse(90, 930, 20, 20);
+    painter.setPen(primaryColorCV);
+    painter.drawEllipse(90, 1110, 20, 20);
+    painter.setPen(textColorInfos);
+
     fontSubTitle.setCapitalization(QFont::AllUppercase);;
     painter.setFont(fontSubTitle);
     painter.drawText(positionExperienceX, positionExperienceY, "Expériences");
@@ -919,32 +934,37 @@ void CvEditor::on_pdfButton_clicked()
                           ui->dateEditExperienceEnd_2->text() + "\n" +
                           ui->textEditDescExperience_2->toPlainText();
 
-    QString experienceC = ui->textEditNomExperience_3->toPlainText() + "\n" +
-                          ui->textEditLieuExperience_3->toPlainText() + "\n" +
-                          ui->dateEditExperienceStart_3->text() + "\n" +
-                          ui->dateEditExperienceEnd_3->text() + "\n" +
-                          ui->textEditDescExperience_3->toPlainText();
+    // QString experienceC = ui->textEditNomExperience_3->toPlainText() + "\n" +
+    //                       ui->textEditLieuExperience_3->toPlainText() + "\n" +
+    //                       ui->dateEditExperienceStart_3->text() + "\n" +
+    //                       ui->dateEditExperienceEnd_3->text() + "\n" +
+    //                       ui->textEditDescExperience_3->toPlainText();
 
 
-    // définition de la liste des formations
+    // définition de la liste des expériences
     QStringList experiences;
-    experiences << experienceA << experienceB << experienceC;
+    experiences << experienceA << experienceB;
 
     // Position intiale des foramtions
     int yInitPosExp = positionExperienceY + 50;
+    int yInitPosLineExp = yInitPosExp + 25;
     painter.setFont(fontSubTitleList);
 
     foreach (const QString &experience, experiences) {
         QStringList lines = experience.split("\n");
         foreach (const QString &line, lines) {
-            painter.drawText(positionExperienceX, yInitPosExp, line);
-            yInitPosExp += 25;
+            painter.drawText(positionExperienceX, yInitPosLineExp, line);
+            yInitPosLineExp += 25;
         }
+        yInitPosExp += 50;
     }
 
     // Partie informations perso de la personne
-    painter.drawEllipse(590, 350, 20, 20);
+    painter.setPen(primaryColorCV);
 
+    painter.drawEllipse(540, 350, 20, 20);
+
+    painter.setPen(textColorJob);
     painter.setFont(fontSubTitle);
     painter.setPen(textColorInfos);
     painter.drawText(positionInfoPersoX, positionInfoPersoY, "Informations");
@@ -1032,9 +1052,9 @@ void CvEditor::on_pdfButton_clicked()
     competences.insert(competence1, levelComp1); // Par exemple, niveau de compétence sur 100
     competences.insert(competence2, levelComp2);
     competences.insert(competence3, levelComp3);
-    competences.insert(competence4, levelComp4);
-    competences.insert(competence5, levelComp5);
-    competences.insert(competence6, levelComp6);
+    // competences.insert(competence4, levelComp4);
+    // competences.insert(competence5, levelComp5);
+    // competences.insert(competence6, levelComp6);
 
     // Définition des positions pour afficher les compétences et les barres de progression
     int startX = positionCompetenceX;
@@ -1067,7 +1087,11 @@ void CvEditor::on_pdfButton_clicked()
     }
 
     // Partie description de la personne
-    painter.drawEllipse(590, 650, 20, 20);
+
+    painter.setPen(primaryColorCV);
+
+    painter.drawEllipse(540, 730, 20, 20);
+    painter.setPen(textColorInfos);
 
     painter.setFont(fontSubTitle);
     painter.setPen(textColorInfos);
@@ -1075,7 +1099,10 @@ void CvEditor::on_pdfButton_clicked()
 
 
     // Partie loisirs
-    painter.drawEllipse(590, 1100, 20, 20);
+    painter.setPen(primaryColorCV);
+
+    painter.drawEllipse(540, 1110, 20, 20);
+    painter.setPen(textColorJob);
 
     painter.setFont(fontSubTitle);
     painter.setPen(textColorInfos);
