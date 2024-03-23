@@ -76,8 +76,6 @@ private slots:
 
     void on_backToFormations_clicked();
 
-    void on_backToFormations_2_clicked();
-
     void on_backToExperiences_clicked();
 
     void on_backToInfoPerso_clicked();
@@ -85,6 +83,8 @@ private slots:
     void on_backToSkills_clicked();
 
     void on_backToActivity_clicked();
+
+    void on_imageExport_clicked();
 
 private:
 
