@@ -1549,3 +1549,570 @@ void CvEditor::on_backToActivity_clicked()
     ui->stackedWidget->setCurrentWidget(ui->pageActivity);
 }
 
+
+void CvEditor::on_imageExport_clicked()
+{
+    // Dimensions de la page A4 en pixels à 300 DPI
+    const int pageWidth = 965;
+    const int pageHeight = 1500;
+
+    // Création d'un QPixmap pour dessiner l'image
+    QPixmap pixmap(pageWidth, pageHeight);
+    pixmap.fill(Qt::white); // Remplir l'image avec un fond blanc (facultatif)
+
+    QPainter painter;
+    painter.begin(&pixmap);
+
+    int positionDescX;
+    int positionDescY;
+
+    int positionFormationX;
+    int positionFormationY;
+
+    int positionExperienceX;
+    int positionExperienceY;
+
+    int positionInfoPersoX;
+    int positionInfoPersoY;
+
+    int positionCompetenceX;
+    int positionCompetenceY;
+
+    int positionLoisirX;
+    int positionLoisirY;
+
+
+    // Calcul des positions
+    switch (positionDescription) {
+    case 1:
+        positionDescX = 130;
+        positionDescY = 370;
+        break;
+    case 2:
+        positionDescX = 580;
+        positionDescY = 370;
+        break;
+    case 3:
+        positionDescX = 130;
+        positionDescY = 750;
+        break;
+    case 4:
+        positionDescX = 580;
+        positionDescY = 750;
+        break;
+    case 5:
+        positionDescX = 130;
+        positionDescY = 1130;
+        break;
+    case 6:
+        positionDescX = 580;
+        positionDescY = 1130;
+        break;
+    default:
+        positionDescX = 9999;
+        positionDescY = 9999;
+        break;
+    }
+
+    switch (positionFormation) {
+    case 1:
+        positionFormationX = 130;
+        positionFormationY = 370;
+        break;
+    case 2:
+        positionFormationX = 580;
+        positionFormationY = 370;
+        break;
+    case 3:
+        positionFormationX = 130;
+        positionFormationY = 750;
+        break;
+    case 4:
+        positionFormationX = 580;
+        positionFormationY = 750;
+        break;
+    case 5:
+        positionFormationX = 130;
+        positionFormationY = 1130;
+        break;
+    case 6:
+        positionFormationX = 580;
+        positionFormationY = 1130;
+        break;
+    default:
+        positionFormationX = 9999;
+        positionFormationY = 9999;
+        break;
+    }
+
+    switch (positionExperience) {
+    case 1:
+        positionExperienceX = 130;
+        positionExperienceY = 370;
+        break;
+    case 2:
+        positionExperienceX = 580;
+        positionExperienceY = 370;
+        break;
+    case 3:
+        positionExperienceX = 130;
+        positionExperienceY = 750;
+        break;
+    case 4:
+        positionExperienceX = 580;
+        positionExperienceY = 750;
+        break;
+    case 5:
+        positionExperienceX = 130;
+        positionExperienceY = 1130;
+        break;
+    case 6:
+        positionExperienceX = 580;
+        positionExperienceY = 1130;
+        break;
+    default:
+        positionExperienceX = 9999;
+        positionExperienceY = 9999;
+        break;
+    }
+
+    switch (positionInfoPerso) {
+    case 1:
+        positionInfoPersoX = 130;
+        positionInfoPersoY = 370;
+        break;
+    case 2:
+        positionInfoPersoX = 580;
+        positionInfoPersoY = 370;
+        break;
+    case 3:
+        positionInfoPersoX = 130;
+        positionInfoPersoY = 750;
+        break;
+    case 4:
+        positionInfoPersoX = 580;
+        positionInfoPersoY = 750;
+        break;
+    case 5:
+        positionInfoPersoX = 130;
+        positionInfoPersoY = 1130;
+        break;
+    case 6:
+        positionInfoPersoX = 580;
+        positionInfoPersoY = 1130;
+        break;
+    default:
+        positionInfoPersoX = 9999;
+        positionInfoPersoY = 9999;
+        break;
+    }
+
+    switch (positionCompetence) {
+    case 1:
+        positionCompetenceX = 130;
+        positionCompetenceY = 370;
+        break;
+    case 2:
+        positionCompetenceX = 580;
+        positionCompetenceY = 370;
+        break;
+    case 3:
+        positionCompetenceX = 130;
+        positionCompetenceY = 750;
+        break;
+    case 4:
+        positionCompetenceX = 580;
+        positionCompetenceY = 750;
+        break;
+    case 5:
+        positionCompetenceX = 130;
+        positionCompetenceY = 1130;
+        break;
+    case 6:
+        positionCompetenceX = 580;
+        positionCompetenceY = 1130;
+        break;
+    default:
+        positionCompetenceX = 9999;
+        positionCompetenceY = 9999;
+        break;
+    }
+
+    switch (positionLoisir) {
+    case 1:
+        positionLoisirX = 130;
+        positionLoisirY = 370;
+        break;
+    case 2:
+        positionLoisirX = 580;
+        positionLoisirY = 370;
+        break;
+    case 3:
+        positionLoisirX = 130;
+        positionLoisirY = 750;
+        break;
+    case 4:
+        positionLoisirX = 580;
+        positionLoisirY = 750;
+        break;
+    case 5:
+        positionLoisirX = 130;
+        positionLoisirY = 1130;
+        break;
+    case 6:
+        positionLoisirX = 580;
+        positionLoisirY = 1130;
+        break;
+    default:
+        positionLoisirX = 9999;
+        positionLoisirY = 9999;
+        break;
+    }
+
+    // Création de l'en-tête
+
+    // Rectangle en fond
+    painter.setBrush(primaryColorCV);
+    painter.setPen(primaryColorCV);
+    painter.drawRect(5, 0, 950, 300);
+
+    // Création du texte prenom nom
+    // définition de la police
+    QFont fontName (textFont, 40);
+    painter.setFont(fontName);
+
+    painter.setPen(textColorName);
+    painter.drawText(300, 150, ui->nameText->toPlainText() + " " + ui->surnameText->toPlainText());
+
+
+    // Ajout de la photo téléchargée par l'utilisateur
+    QPixmap photo = ui->labelPhoto->pixmap(); // Récupérer la photo téléchargée depuis le label
+
+    if (!photo.isNull()) {
+        // Définir la position et la taille de l'image dans le PDF
+        int photoWidth = 200;
+        int photoHeight = 200;
+        int photoX = 75; // Position X où placer la photo
+        int photoY = 50; // Position Y où placer la photo
+
+        // Dessiner l'image dans le fichier PDF
+        painter.drawPixmap(photoX, photoY, photoWidth, photoHeight, photo);
+    }
+
+    // création du métier recherche
+    QFont fontJob (textFont, 20);
+    painter.setFont(fontJob);
+    painter.setPen(textColorJob);
+    painter.drawText(300, 200, ui->jobEdit->toPlainText());
+
+
+    painter.setPen(primaryColorCV);
+    painter.drawLine(100,300, 100, 1500);
+    painter.drawLine(550,300, 550, 1500);
+
+    painter.setBrush(primaryColorCV);
+    // Partie description de la personne
+    painter.drawEllipse(90, 350, 20, 20);
+
+    int maxWidthDesc = 400;
+
+    painter.setPen(textColorInfos);
+    QFont fontSubTitle (textFont, 14);
+    QFont fontDesc (textFont, 12);
+    fontSubTitle.setCapitalization(QFont::AllUppercase);;
+
+    painter.setFont(fontSubTitle);
+
+    painter.drawText(positionDescX, positionDescY, "Description");
+    painter.setFont(fontDesc);
+    painter.setPen(textColorInfos);
+    QRect textRect(positionDescX, positionDescY + 10, maxWidthDesc, 200);
+    painter.drawText(textRect, Qt::TextWordWrap, ui->textEditDesc->toPlainText());
+
+
+    // partie formation
+    painter.setPen(primaryColorCV);
+    painter.drawEllipse(90, 730, 20, 20);
+    painter.setPen(textColorInfos);
+    painter.setFont(fontSubTitle);
+    painter.drawText(positionFormationX, positionFormationY, "Formations");
+
+
+    // définition de la liste des formations
+
+    QString formationA = ui->textEditNomDiplome->toPlainText() + "\n" +
+                         ui->textEditLieuDiplome->toPlainText() + "\n" +
+                         ui->dateEditDiplome->text() + "\n" +
+                         ui->textEditDescDiplome->toPlainText();
+
+    QString formationB = ui->textEditNomDiplome_2->toPlainText() + "\n" +
+                         ui->textEditLieuDiplome_2->toPlainText() + "\n" +
+                         ui->dateEditDiplome_2->text() + "\n" +
+                         ui->textEditDescDiplome_2->toPlainText();
+
+    QString formationC = ui->textEditNomDiplome_3->toPlainText() + "\n" +
+                         ui->textEditLieuDiplome_3->toPlainText() + "\n" +
+                         ui->dateEditDiplome_3->text() + "\n" +
+                         ui->textEditDescDiplome_3->toPlainText();
+
+    // Créer une QStringList pour stocker les informations sur les formations
+    QStringList formations;
+    formations << formationA << formationB;
+
+    // Position intiale des foramtions
+    int yInitPosForm = positionFormationY + 50;
+    int yInitPosLineForm = yInitPosForm + 25;
+    QFont fontSubTitleList (textFont, 12);
+    painter.setFont(fontSubTitleList);
+
+    foreach (const QString &formation, formations) {
+        QStringList lines = formation.split("\n");
+        foreach (const QString &line, lines) {
+            painter.drawText(positionFormationX, yInitPosLineForm, line);
+            yInitPosLineForm += 25;
+        }
+        yInitPosForm = yInitPosForm + yInitPosLineForm + 100;
+
+    }
+
+    // partie expériences
+    painter.setPen(primaryColorCV);
+    painter.drawEllipse(90, 1110, 20, 20);
+    painter.setPen(textColorInfos);
+
+    fontSubTitle.setCapitalization(QFont::AllUppercase);;
+    painter.setFont(fontSubTitle);
+    painter.drawText(positionExperienceX, positionExperienceY, "Expériences");
+
+
+    QString experienceA = ui->textEditNomExperience->toPlainText() + "\n" +
+                          ui->textEditLieuExperience->toPlainText() + "\n" +
+                          ui->dateEditExperienceStart->text() + "\n" +
+                          ui->dateEditExperienceEnd->text() + "\n" +
+                          ui->textEditDescExperience->toPlainText();
+
+    QString experienceB = ui->textEditNomExperience_2->toPlainText() + "\n" +
+                          ui->textEditLieuExperience_2->toPlainText() + "\n" +
+                          ui->dateEditExperienceStart_2->text() + "\n" +
+                          ui->dateEditExperienceEnd_2->text() + "\n" +
+                          ui->textEditDescExperience_2->toPlainText();
+
+    // QString experienceC = ui->textEditNomExperience_3->toPlainText() + "\n" +
+    //                       ui->textEditLieuExperience_3->toPlainText() + "\n" +
+    //                       ui->dateEditExperienceStart_3->text() + "\n" +
+    //                       ui->dateEditExperienceEnd_3->text() + "\n" +
+    //                       ui->textEditDescExperience_3->toPlainText();
+
+
+    // définition de la liste des expériences
+    QStringList experiences;
+    experiences << experienceA << experienceB;
+
+    // Position intiale des foramtions
+    int yInitPosExp = positionExperienceY + 50;
+    int yInitPosLineExp = yInitPosExp + 25;
+    painter.setFont(fontSubTitleList);
+
+    foreach (const QString &experience, experiences) {
+        QStringList lines = experience.split("\n");
+        foreach (const QString &line, lines) {
+            painter.drawText(positionExperienceX, yInitPosLineExp, line);
+            yInitPosLineExp += 25;
+        }
+        yInitPosExp += 50;
+    }
+
+    // Partie informations perso de la personne
+    painter.setPen(primaryColorCV);
+
+    painter.drawEllipse(540, 350, 20, 20);
+
+    painter.setPen(textColorJob);
+    painter.setFont(fontSubTitle);
+    painter.setPen(textColorInfos);
+    painter.drawText(positionInfoPersoX, positionInfoPersoY, "Informations");
+
+    // définition de la liste des informations personnelles
+
+    QString age = ui->textEditAge->toPlainText();
+
+    if (ui->checkBoxAge->isChecked()) {
+        age = NULL;
+    }
+    QString phoneNumber = ui->textEditPhoneNumber->toPlainText();
+    if (ui->checkBoxPhoneNumber->isChecked()) {
+        phoneNumber = NULL;
+    }
+    QString mail = ui->textEditMail->toPlainText();
+    if (ui->checkBoxMail->isChecked()) {
+        mail = NULL;
+    }
+    QString website = ui->textEditWebsite->toPlainText();
+    if (ui->checkBoxWebsite->isChecked()) {
+        website = NULL;
+    }
+
+    QStringList informations;
+    informations << age << phoneNumber << mail << website;
+
+    // Position intiale des informations
+    int yInitPosInfo = positionInfoPersoY + 50;
+    painter.setFont(fontSubTitleList);
+
+    foreach (const QString &information, informations) {
+        if (information.isNull() || information.isEmpty()) {
+            yInitPosInfo += 0;
+        } else {
+            painter.drawText(positionInfoPersoX, yInitPosInfo, information);
+            yInitPosInfo += 35;
+        }
+    }
+
+    // Définition des compétences et de leurs niveaux
+
+    QString competence1 = ui->textEditCompetence->toPlainText();
+    int levelComp1 = ui->spinBoxCompetence->value();
+    if (ui->checkBoxCompetence->isChecked()) {
+        competence1 = NULL;
+        levelComp1 = NULL;
+    }
+
+    QString competence2 = ui->textEditCompetence_2->toPlainText();
+    int levelComp2 = ui->spinBoxCompetence_2->value();
+    if (ui->checkBoxCompetence_2->isChecked()) {
+        competence2 = NULL;
+        levelComp2 = NULL;
+    }
+
+    QString competence3 = ui->textEditCompetence_3->toPlainText();
+    int levelComp3 = ui->spinBoxCompetence_3->value();
+    if (ui->checkBoxCompetence_3->isChecked()) {
+        competence3 = NULL;
+        levelComp3 = NULL;
+    }
+
+    QString competence4 = ui->textEditCompetence_4->toPlainText();
+    int levelComp4 = ui->spinBoxCompetence_4->value();
+    if (ui->checkBoxCompetence_4->isChecked()) {
+        competence4 = NULL;
+        levelComp4 = NULL;
+    }
+
+    QString competence5 = ui->textEditCompetence_5->toPlainText();
+    int levelComp5 = ui->spinBoxCompetence_5->value();
+    if (ui->checkBoxCompetence_5->isChecked()) {
+        competence1 = NULL;
+        levelComp1 = NULL;
+    }
+    QString competence6 = ui->textEditCompetence_6->toPlainText();
+    int levelComp6 = ui->spinBoxCompetence_6->value();
+    if (ui->checkBoxCompetence_6->isChecked()) {
+        competence6 = NULL;
+        levelComp6 = NULL;
+    }
+
+    QMap<QString, int> competences;
+    competences.insert(competence1, levelComp1); // Par exemple, niveau de compétence sur 100
+    competences.insert(competence2, levelComp2);
+    competences.insert(competence3, levelComp3);
+    // competences.insert(competence4, levelComp4);
+    // competences.insert(competence5, levelComp5);
+    // competences.insert(competence6, levelComp6);
+
+    // Définition des positions pour afficher les compétences et les barres de progression
+    int startX = positionCompetenceX;
+    int startY = positionCompetenceY + 50;
+    int barWidth = 200;
+    int barHeight = 20;
+    int barMargin = 50;
+
+    // Définition de la police et de la taille de la police pour les compétences
+    QFont fontCompetence(textFont, 10);
+    painter.setFont(fontCompetence);
+
+    // Parcourir les compétences et dessiner les noms et les barres de progression
+    foreach (const QString &competence, competences.keys()) {
+
+        if (competence.isNull() || competence.isEmpty()) {
+            startY += 0;
+        } else {
+            // Dessiner le nom de la compétence
+            painter.drawText(startX, startY, competence);
+
+            // Dessiner la barre de progression
+            int niveau = competences.value(competence);
+            QRect barRect(startX, startY + 5, niveau * barWidth / 100, barHeight);
+            painter.fillRect(barRect, primaryColorCV); // Vous pouvez ajuster la couleur de la barre ici
+
+            // Mettre à jour la position Y pour la prochaine compétence
+            startY += barHeight + barMargin;
+        }
+    }
+
+    // Partie description de la personne
+
+    painter.setPen(primaryColorCV);
+
+    painter.drawEllipse(540, 730, 20, 20);
+    painter.setPen(textColorInfos);
+
+    painter.setFont(fontSubTitle);
+    painter.setPen(textColorInfos);
+    painter.drawText(positionCompetenceX, positionCompetenceY, "Compétences");
+
+
+    // Partie loisirs
+    painter.setPen(primaryColorCV);
+
+    painter.drawEllipse(540, 1110, 20, 20);
+    painter.setPen(textColorJob);
+
+    painter.setFont(fontSubTitle);
+    painter.setPen(textColorInfos);
+    painter.drawText(positionLoisirX, positionLoisirY, "Loisirs");
+
+    QString loisir1 = ui->textEditActivite->toPlainText();
+    if (ui->checkBoxActivite->isChecked()) {
+        loisir1 = NULL;
+    }
+
+    QString loisir2 = ui->textEditActivite_2->toPlainText();
+    if (ui->checkBoxActivite_2->isChecked()) {
+        loisir2 = NULL;
+    }
+
+    QString loisir3 = ui->textEditActivite_3->toPlainText();
+    if (ui->checkBoxActivite_3->isChecked()) {
+        loisir3 = NULL;
+    }
+
+    // définition de la liste des informations personnelles
+    QStringList loisirs;
+    loisirs << loisir1 << loisir2 << loisir3;
+
+    // Position intiale des informations
+    int yInitPosLoi = positionLoisirY + 50;
+    painter.setFont(fontSubTitleList);
+
+    foreach (const QString &loisir, loisirs) {
+        if (loisir.isNull() || loisir.isEmpty()) {
+            yInitPosLoi += 0;
+        }
+
+        painter.drawText(positionLoisirX, yInitPosLoi, loisir);
+        yInitPosLoi += 35;
+    }
+
+    painter.end();
+
+    // Enregistrer l'image résultante au format PNG
+    QString filePath = "C:/Users/username/Desktop/image.png"; // Chemin où l'image sera enregistrée
+    if (!pixmap.save(filePath, "PNG")) {
+        qDebug() << "Erreur : Impossible d'enregistrer l'image.";
+        return;
+    }
+
+    qDebug() << "Image exportée avec succès : " << filePath;
+
+}
+
