@@ -28,7 +28,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>13</number>
    </property>
    <widget class="QWidget" name="page_3">
     <widget class="QLabel" name="label">
@@ -101,7 +101,7 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>440</x>
        <y>410</y>
        <width>101</width>
        <height>29</height>
@@ -260,12 +260,30 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
       <string>Couleur choisie</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="backToIntro">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>410</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_5">
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>520</x>
        <y>410</y>
        <width>111</width>
        <height>29</height>
@@ -335,6 +353,24 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backToColor">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>400</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
      </property>
     </widget>
    </widget>
@@ -435,7 +471,7 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>500</x>
        <y>410</y>
        <width>111</width>
        <height>29</height>
@@ -450,12 +486,30 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
       <string>Continuer</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="backToFont">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>410</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="pagePhoto">
     <widget class="QPushButton" name="pushButton_14">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>490</x>
        <y>410</y>
        <width>111</width>
        <height>29</height>
@@ -530,6 +584,24 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="backToFont_2">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>410</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_7">
     <widget class="QLabel" name="label_7">
@@ -571,7 +643,7 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>520</x>
        <y>420</y>
        <width>101</width>
        <height>29</height>
@@ -607,6 +679,24 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="backToPicture">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>420</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_desc">
     <widget class="QLabel" name="label_8">
@@ -635,8 +725,8 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_7">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>440</y>
+       <x>520</x>
+       <y>430</y>
        <width>83</width>
        <height>29</height>
       </rect>
@@ -664,6 +754,24 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backToJob">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>430</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
      </property>
     </widget>
    </widget>
@@ -963,14 +1071,32 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_8">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>440</y>
+       <x>500</x>
+       <y>430</y>
        <width>121</width>
        <height>29</height>
       </rect>
      </property>
      <property name="text">
       <string>Continuer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backToDesc">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>430</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
      </property>
     </widget>
    </widget>
@@ -1339,7 +1465,7 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_9">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>460</x>
        <y>430</y>
        <width>131</width>
        <height>29</height>
@@ -1347,6 +1473,24 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
      </property>
      <property name="text">
       <string>Continuer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backToFormations">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>430</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
      </property>
     </widget>
    </widget>
@@ -1541,7 +1685,7 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_10">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>550</x>
        <y>440</y>
        <width>83</width>
        <height>29</height>
@@ -1549,6 +1693,24 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
      </property>
      <property name="text">
       <string>Continuer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backToExperiences">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>440</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
      </property>
     </widget>
    </widget>
@@ -1920,8 +2082,8 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_11">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>440</y>
+       <x>530</x>
+       <y>430</y>
        <width>101</width>
        <height>29</height>
       </rect>
@@ -2006,6 +2168,24 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
      </property>
      <property name="text">
       <string>Niveau</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backToInfoPerso">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>430</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
      </property>
     </widget>
    </widget>
@@ -2155,7 +2335,7 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
     <widget class="QPushButton" name="pushButton_12">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>550</x>
        <y>440</y>
        <width>83</width>
        <height>29</height>
@@ -2165,13 +2345,31 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
       <string>Continuer</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="backToSkills">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>440</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="pageTemplate">
     <widget class="QPushButton" name="pushButton_13">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>410</y>
+       <x>460</x>
+       <y>450</y>
        <width>201</width>
        <height>29</height>
       </rect>
@@ -2180,13 +2378,31 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
       <string>Continuer</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="backToActivity">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>440</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="pagePrint">
     <widget class="QPushButton" name="pdfButton">
      <property name="geometry">
       <rect>
        <x>190</x>
-       <y>310</y>
+       <y>290</y>
        <width>339</width>
        <height>29</height>
       </rect>
@@ -2219,6 +2435,19 @@ Si vous recherchez un emploi et souhaitez créer votre CV, vous êtes au bon end
      </property>
      <property name="wordWrap">
       <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pdfButton_2">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>340</y>
+       <width>339</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Exporter une image</string>
      </property>
     </widget>
    </widget>
