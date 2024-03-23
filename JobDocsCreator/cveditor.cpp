@@ -1477,3 +1477,75 @@ void CvEditor::on_pushButton_14_clicked()
     ui->stackedWidget->setCurrentWidget(ui->page_7);
 }
 
+
+void CvEditor::on_backToIntro_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_3);
+}
+
+
+void CvEditor::on_backToColor_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_4);
+}
+
+
+void CvEditor::on_backToFont_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_5);
+}
+
+
+void CvEditor::on_backToFont_2_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_6);
+}
+
+
+void CvEditor::on_backToPicture_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pagePhoto);
+}
+
+
+void CvEditor::on_backToJob_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_7);
+}
+
+
+void CvEditor::on_backToDesc_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->page_desc);
+}
+
+
+void CvEditor::on_backToFormations_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageFormations);
+}
+
+
+void CvEditor::on_backToExperiences_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageExperiences);
+}
+
+
+void CvEditor::on_backToInfoPerso_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pagePerso);
+}
+
+
+void CvEditor::on_backToSkills_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageSkills);
+}
+
+
+void CvEditor::on_backToActivity_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageActivity);
+}
+
