@@ -31,7 +31,7 @@
       <x>-1</x>
       <y>-1</y>
       <width>801</width>
-      <height>571</height>
+      <height>599</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -122,9 +122,38 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="motivation_button">
+       <property name="maximumSize">
+        <size>
+         <width>500</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Poppins</family>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Créer une lettre de motivation</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
     </layout>
     <zorder>slogan</zorder>
     <zorder>appName</zorder>
+    <zorder>motivation_button</zorder>
     <zorder>pushButton</zorder>
    </widget>
   </widget>
@@ -137,8 +166,27 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuParam_tres">
+    <property name="title">
+     <string>Paramètres</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionCouleurs_de_base"/>
+    <addaction name="actionPolice_de_base"/>
+   </widget>
+   <addaction name="menuParam_tres"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCouleurs_de_base">
+   <property name="text">
+    <string>Couleurs de base</string>
+   </property>
+  </action>
+  <action name="actionPolice_de_base">
+   <property name="text">
+    <string>Police de base</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

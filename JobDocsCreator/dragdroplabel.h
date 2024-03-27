@@ -16,7 +16,6 @@ public:
     bool getAcceptDrop(void);
     QString imageName; // récupérer le nom de l'image
 
-    // Dans la classe DragDropLabel, ajoutez une méthode pour obtenir l'image de l'étiquette
     QImage imageStart;
     QImage imageResult;
 

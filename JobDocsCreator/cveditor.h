@@ -60,6 +60,32 @@ private slots:
 
     void on_pushButton_14_clicked();
 
+    void on_backToIntro_clicked();
+
+    void on_backToColor_clicked();
+
+    void on_backToFont_clicked();
+
+    void on_backToFont_2_clicked();
+
+    void on_backToPicture_clicked();
+
+    void on_backToJob_clicked();
+
+    void on_backToDesc_clicked();
+
+    void on_backToFormations_clicked();
+
+    void on_backToExperiences_clicked();
+
+    void on_backToInfoPerso_clicked();
+
+    void on_backToSkills_clicked();
+
+    void on_backToActivity_clicked();
+
+    void on_imageExport_clicked();
+
 private:
 
     Ui::CvEditor *ui;

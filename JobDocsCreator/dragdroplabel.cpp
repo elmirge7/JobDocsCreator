@@ -71,14 +71,7 @@ void DragDropLabel::dropEvent(QDropEvent *event)
         imageResult = pixmap.toImage();
 
 
-        // if (result == start) {
-        //     qDebug() << "Le start et le result sont identiques";
-        // } else {
-        //     qDebug() << "Ils ne le sont pas"
-        //              << "Voici start : " << start
-        //              << "et voici result : " << result;
-        // }
-        
+
         if (event->source() == this)
         {
             event->setDropAction(Qt::CopyAction);

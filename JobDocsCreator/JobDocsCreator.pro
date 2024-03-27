@@ -13,15 +13,18 @@ SOURCES += \
     dragdroplabel.cpp \
     main.cpp \
     mainwindow.cpp \
+    motivationletter.cpp
 
 HEADERS += \
     cveditor.h \
     dragdroplabel.h \
-    mainwindow.h
+    mainwindow.h \
+    motivationletter.h
 
 FORMS += \
     cveditor.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    motivationletter.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

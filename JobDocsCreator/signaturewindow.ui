@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave"/>
+    <addaction name="actionClear"/>
+   </widget>
+   <widget class="QMenu" name="menuBrush_Size">
+    <property name="title">
+     <string>Brush Size</string>
+    </property>
+    <addaction name="action3px"/>
+    <addaction name="action5px"/>
+    <addaction name="action7px"/>
+    <addaction name="action9px"/>
+   </widget>
+   <widget class="QMenu" name="menuBrush_Color">
+    <property name="title">
+     <string>Brush Color</string>
+    </property>
+    <addaction name="actionBlack"/>
+    <addaction name="actionWhite"/>
+    <addaction name="actionRed"/>
+    <addaction name="actionGreen"/>
+    <addaction name="actionYellow"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuBrush_Size"/>
+   <addaction name="menuBrush_Color"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/images.png</normaloff>:/images/images.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/clear.png</normaloff>:/images/clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="action3px">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/3px.png</normaloff>:/images/3px.png</iconset>
+   </property>
+   <property name="text">
+    <string>3px</string>
+   </property>
+  </action>
+  <action name="action5px">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/5px.png</normaloff>:/images/5px.png</iconset>
+   </property>
+   <property name="text">
+    <string>5px</string>
+   </property>
+  </action>
+  <action name="action7px">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/7px.png</normaloff>:/images/7px.png</iconset>
+   </property>
+   <property name="text">
+    <string>7px</string>
+   </property>
+  </action>
+  <action name="action9px">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/9px.png</normaloff>:/images/9px.png</iconset>
+   </property>
+   <property name="text">
+    <string>9px</string>
+   </property>
+  </action>
+  <action name="actionBlack">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/black.png</normaloff>:/images/black.png</iconset>
+   </property>
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="actionRed">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/red.png</normaloff>:/images/red.png</iconset>
+   </property>
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="actionWhite">
+   <property name="text">
+    <string>White</string>
+   </property>
+  </action>
+  <action name="actionGreen">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/green.png</normaloff>:/images/green.png</iconset>
+   </property>
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="actionYellow">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/yellow.png</normaloff>:/images/yellow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Yellow</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
