@@ -182,20 +182,11 @@ CvEditor::CvEditor(QWidget *parent)
     ui->label_13->setStyleSheet("color: #FEFEFE;");
     ui->label_14->setStyleSheet("color: #FEFEFE;");
     ui->label_15->setStyleSheet("color: #FEFEFE;");
-    ui->label_16->setStyleSheet("color: #FEFEFE;");
-    ui->label_17->setStyleSheet("color: #FEFEFE;");
-    ui->label_18->setStyleSheet("color: #FEFEFE;");
-    ui->label_19->setStyleSheet("color: #FEFEFE;");
 
     ui->textEditNomDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
     ui->textEditLieuDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
     ui->textEditDescDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
     ui->dateEditDiplome->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->textEditNomDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->textEditLieuDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->textEditDescDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->dateEditDiplome_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-
 
     ui->pushButton_8->setStyleSheet(
         "QPushButton {"
@@ -216,11 +207,6 @@ CvEditor::CvEditor(QWidget *parent)
     ui->label_27->setStyleSheet("color: #FEFEFE;");
     ui->label_28->setStyleSheet("color: #FEFEFE;");
     ui->label_29->setStyleSheet("color: #FEFEFE;");
-    ui->label_30->setStyleSheet("color: #FEFEFE;");
-    ui->label_31->setStyleSheet("color: #FEFEFE;");
-    ui->label_32->setStyleSheet("color: #FEFEFE;");
-    ui->label_33->setStyleSheet("color: #FEFEFE;");
-    ui->label_34->setStyleSheet("color: #FEFEFE;");
 
     ui->label_40->setStyleSheet("color: #FEFEFE; font-size: 16px;");
 
@@ -229,11 +215,6 @@ CvEditor::CvEditor(QWidget *parent)
     ui->textEditLieuExperience->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
     ui->dateEditExperienceStart->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
     ui->dateEditExperienceEnd->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->textEditNomExperience_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->textEditLieuExperience_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->textEditDescExperience_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->dateEditExperienceStart_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
-    ui->dateEditExperienceEnd_2->setStyleSheet("color: #FEFEFE; background-color: #7b2cbf;");
 
 
     ui->pushButton_9->setStyleSheet(
@@ -331,7 +312,6 @@ CvEditor::CvEditor(QWidget *parent)
     ui->label_62->setStyleSheet("QLabel { color: #FEFEFE; }");
     ui->label_63->setStyleSheet("QLabel { color: #FEFEFE; }");
     ui->label_64->setStyleSheet("QLabel { color: #FEFEFE; }");
-    ui->label_65->setStyleSheet("QLabel { color: #FEFEFE; }");
 
     // Style pour la page des compétences
     ui->label_47->setStyleSheet("color: #FEFEFE; font-size: 16px;"); // Titre centré
@@ -448,6 +428,18 @@ CvEditor::CvEditor(QWidget *parent)
     mainLayout->addLayout(leftLayout);
     mainLayout->addLayout(rightLayout);
 
+    // Création des boutons
+    QPushButton *buttonBack = new QPushButton("Retour");
+    QPushButton *buttonContinue = new QPushButton("Continuer");
+
+    // Création du layout pour les boutons
+    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    buttonLayout->addWidget(buttonBack);
+    buttonLayout->addWidget(buttonContinue);
+
+    mainLayout->addLayout(buttonLayout);
+
+
     // Configuration du layout de la page
     int pageIndex = ui->stackedWidget->indexOf(ui->pageTemplate);
     if (pageIndex != -1) {
@@ -456,6 +448,8 @@ CvEditor::CvEditor(QWidget *parent)
     }
 
 
+    connect(buttonBack, &QPushButton::clicked, this, &CvEditor::onButtonBackClicked);
+    connect(buttonContinue, &QPushButton::clicked, this, &CvEditor::onButtonContinueClicked);
 
     // les images de base
 
@@ -833,15 +827,9 @@ void CvEditor::on_pdfButton_clicked()
                          ui->dateEditDiplome->text() + "\n" +
                          ui->textEditDescDiplome->toPlainText();
 
-    QString formationB = ui->textEditNomDiplome_2->toPlainText() + "\n" +
-                         ui->textEditLieuDiplome_2->toPlainText() + "\n" +
-                         ui->dateEditDiplome_2->text() + "\n" +
-                         ui->textEditDescDiplome_2->toPlainText();
-
-
     // Création d'une QStringList pour stocker les informations sur les formations
     QStringList formations;
-    formations << formationA << formationB;
+    formations << formationA;
 
     // Position intiale des foramtions
     int yInitPosForm = positionFormationY + 50;
@@ -875,22 +863,10 @@ void CvEditor::on_pdfButton_clicked()
                           ui->dateEditExperienceEnd->text() + "\n" +
                           ui->textEditDescExperience->toPlainText();
 
-    QString experienceB = ui->textEditNomExperience_2->toPlainText() + "\n" +
-                          ui->textEditLieuExperience_2->toPlainText() + "\n" +
-                          ui->dateEditExperienceStart_2->text() + "\n" +
-                          ui->dateEditExperienceEnd_2->text() + "\n" +
-                          ui->textEditDescExperience_2->toPlainText();
-
-    // QString experienceC = ui->textEditNomExperience_3->toPlainText() + "\n" +
-    //                       ui->textEditLieuExperience_3->toPlainText() + "\n" +
-    //                       ui->dateEditExperienceStart_3->text() + "\n" +
-    //                       ui->dateEditExperienceEnd_3->text() + "\n" +
-    //                       ui->textEditDescExperience_3->toPlainText();
-
 
     // définition de la liste des expériences
     QStringList experiences;
-    experiences << experienceA << experienceB;
+    experiences << experienceA;
 
     // Position intiale des foramtions
     int yInitPosExp = positionExperienceY + 50;
@@ -1237,7 +1213,7 @@ void CvEditor::on_pushButton_12_clicked()
 }
 
 
-void CvEditor::on_pushButton_13_clicked()
+void CvEditor::onButtonContinueClicked()
 {
 
     if (m_dragdroplabel1->pixmap().toImage() == m_dragdroplabelresult1->pixmap().toImage())
@@ -1481,7 +1457,7 @@ void CvEditor::on_backToSkills_clicked()
 }
 
 
-void CvEditor::on_backToActivity_clicked()
+void CvEditor::onButtonBackClicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->pageActivity);
 }
@@ -1782,14 +1758,10 @@ void CvEditor::on_imageExport_clicked()
                          ui->dateEditDiplome->text() + "\n" +
                          ui->textEditDescDiplome->toPlainText();
 
-    QString formationB = ui->textEditNomDiplome_2->toPlainText() + "\n" +
-                         ui->textEditLieuDiplome_2->toPlainText() + "\n" +
-                         ui->dateEditDiplome_2->text() + "\n" +
-                         ui->textEditDescDiplome_2->toPlainText();
 
     // Créer une QStringList pour stocker les informations sur les formations
     QStringList formations;
-    formations << formationA << formationB;
+    formations << formationA;
 
     // Position intiale des foramtions
     int yInitPosForm = positionFormationY + 50;
@@ -1823,22 +1795,11 @@ void CvEditor::on_imageExport_clicked()
                           ui->dateEditExperienceEnd->text() + "\n" +
                           ui->textEditDescExperience->toPlainText();
 
-    QString experienceB = ui->textEditNomExperience_2->toPlainText() + "\n" +
-                          ui->textEditLieuExperience_2->toPlainText() + "\n" +
-                          ui->dateEditExperienceStart_2->text() + "\n" +
-                          ui->dateEditExperienceEnd_2->text() + "\n" +
-                          ui->textEditDescExperience_2->toPlainText();
-
-    // QString experienceC = ui->textEditNomExperience_3->toPlainText() + "\n" +
-    //                       ui->textEditLieuExperience_3->toPlainText() + "\n" +
-    //                       ui->dateEditExperienceStart_3->text() + "\n" +
-    //                       ui->dateEditExperienceEnd_3->text() + "\n" +
-    //                       ui->textEditDescExperience_3->toPlainText();
 
 
     // définition de la liste des expériences
     QStringList experiences;
-    experiences << experienceA << experienceB;
+    experiences << experienceA;
 
     // Position intiale des foramtions
     int yInitPosExp = positionExperienceY + 50;

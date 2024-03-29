@@ -56,8 +56,6 @@ private slots:
 
     void on_pushButton_12_clicked();
 
-    void on_pushButton_13_clicked();
-
     void on_pushButton_14_clicked();
 
     void on_backToIntro_clicked();
@@ -82,9 +80,11 @@ private slots:
 
     void on_backToSkills_clicked();
 
-    void on_backToActivity_clicked();
+    void onButtonBackClicked();
 
     void on_imageExport_clicked();
+
+    void onButtonContinueClicked();
 
 private:
 
