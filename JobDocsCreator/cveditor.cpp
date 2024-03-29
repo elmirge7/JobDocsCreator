@@ -980,6 +980,12 @@ void CvEditor::on_pdfButton_clicked()
     competences.insert(competence1, levelComp1);
     competences.insert(competence2, levelComp2);
     competences.insert(competence3, levelComp3);
+<<<<<<< HEAD
+=======
+    // competences.insert(competence4, levelComp4);
+    // competences.insert(competence5, levelComp5);
+    // competences.insert(competence6, levelComp6);
+>>>>>>> ba336fe8a1a1341289237f90e02930ca89c75333
 
     // Définition des positions pour afficher les compétences et les barres de progression
     int startX = positionCompetenceX;
@@ -1787,6 +1793,14 @@ void CvEditor::on_imageExport_clicked()
                          ui->dateEditDiplome_2->text() + "\n" +
                          ui->textEditDescDiplome_2->toPlainText();
 
+<<<<<<< HEAD
+=======
+    QString formationC = ui->textEditNomDiplome_3->toPlainText() + "\n" +
+                         ui->textEditLieuDiplome_3->toPlainText() + "\n" +
+                         ui->dateEditDiplome_3->text() + "\n" +
+                         ui->textEditDescDiplome_3->toPlainText();
+
+>>>>>>> ba336fe8a1a1341289237f90e02930ca89c75333
     // Créer une QStringList pour stocker les informations sur les formations
     QStringList formations;
     formations << formationA << formationB;
@@ -1923,6 +1937,28 @@ void CvEditor::on_imageExport_clicked()
         levelComp3 = NULL;
     }
 
+<<<<<<< HEAD
+=======
+    QString competence4 = ui->textEditCompetence_4->toPlainText();
+    int levelComp4 = ui->spinBoxCompetence_4->value();
+    if (ui->checkBoxCompetence_4->isChecked()) {
+        competence4 = NULL;
+        levelComp4 = NULL;
+    }
+
+    QString competence5 = ui->textEditCompetence_5->toPlainText();
+    int levelComp5 = ui->spinBoxCompetence_5->value();
+    if (ui->checkBoxCompetence_5->isChecked()) {
+        competence1 = NULL;
+        levelComp1 = NULL;
+    }
+    QString competence6 = ui->textEditCompetence_6->toPlainText();
+    int levelComp6 = ui->spinBoxCompetence_6->value();
+    if (ui->checkBoxCompetence_6->isChecked()) {
+        competence6 = NULL;
+        levelComp6 = NULL;
+    }
+>>>>>>> ba336fe8a1a1341289237f90e02930ca89c75333
 
     QMap<QString, int> competences;
     competences.insert(competence1, levelComp1); // Par exemple, niveau de compétence sur 100
@@ -2018,6 +2054,7 @@ void CvEditor::on_imageExport_clicked()
 
     painter.end();
 
+<<<<<<< HEAD
     // Afficher un dialogue de fichier pour sélectionner l'emplacement et le nom du fichier
     QString filePath = QFileDialog::getSaveFileName(this, tr("Enregistrer l'image"), QDir::homePath(), tr("Images (*.png *.jpg)"));
     if (filePath.isEmpty()) {
@@ -2042,9 +2079,19 @@ void CvEditor::on_imageExport_clicked()
         }
     } else {
         qDebug() << "Format d'image non pris en charge : " << extension;
+=======
+    // Enregistrer l'image résultante au format PNG
+    QString filePath = "C:/Users/username/Desktop/image.png"; // Chemin où l'image sera enregistrée
+    if (!pixmap.save(filePath, "PNG")) {
+        qDebug() << "Erreur : Impossible d'enregistrer l'image.";
+>>>>>>> ba336fe8a1a1341289237f90e02930ca89c75333
         return;
     }
 
     qDebug() << "Image exportée avec succès : " << filePath;
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ba336fe8a1a1341289237f90e02930ca89c75333

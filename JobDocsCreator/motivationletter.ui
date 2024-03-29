@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MotivationLetter</class>
@@ -123,3 +124,137 @@
  <resources/>
  <connections/>
 </ui>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MotivationLetter</class>
+ <widget class="QMainWindow" name="MotivationLetter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>70</y>
+      <width>641</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionSauvegarder"/>
+    <addaction name="actionImporter"/>
+    <addaction name="actionExporter_en_PDF"/>
+   </widget>
+   <widget class="QMenu" name="menuTexte">
+    <property name="title">
+     <string>Texte</string>
+    </property>
+    <addaction name="actionGras"/>
+    <addaction name="actionSoulign"/>
+    <addaction name="actionItalique"/>
+   </widget>
+   <widget class="QMenu" name="menuAlignement">
+    <property name="title">
+     <string>Alignement</string>
+    </property>
+    <addaction name="actionGauche"/>
+    <addaction name="actionDroite"/>
+    <addaction name="actionCentre"/>
+    <addaction name="actionJustifi"/>
+   </widget>
+   <widget class="QMenu" name="menuSigner">
+    <property name="title">
+     <string>Signer</string>
+    </property>
+    <addaction name="actionNouvelle_signature"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuTexte"/>
+   <addaction name="menuAlignement"/>
+   <addaction name="menuSigner"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSauvegarder">
+   <property name="text">
+    <string>Sauvegarder</string>
+   </property>
+  </action>
+  <action name="actionImporter">
+   <property name="text">
+    <string>Importer</string>
+   </property>
+  </action>
+  <action name="actionGras">
+   <property name="text">
+    <string>Gras</string>
+   </property>
+  </action>
+  <action name="actionSoulign">
+   <property name="text">
+    <string>Souligné</string>
+   </property>
+  </action>
+  <action name="actionItalique">
+   <property name="text">
+    <string>Italique</string>
+   </property>
+  </action>
+  <action name="actionGauche">
+   <property name="text">
+    <string>Gauche</string>
+   </property>
+  </action>
+  <action name="actionDroite">
+   <property name="text">
+    <string>Droite</string>
+   </property>
+  </action>
+  <action name="actionCentre">
+   <property name="text">
+    <string>Centre</string>
+   </property>
+  </action>
+  <action name="actionJustifi">
+   <property name="text">
+    <string>Justifié</string>
+   </property>
+  </action>
+  <action name="actionExporter_en_PDF">
+   <property name="text">
+    <string>Exporter en PDF</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_signature">
+   <property name="text">
+    <string>Nouvelle signature</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+>>>>>>> ba336fe8a1a1341289237f90e02930ca89c75333
